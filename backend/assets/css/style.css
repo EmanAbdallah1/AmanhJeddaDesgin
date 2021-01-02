@@ -1,0 +1,7 @@
+.customcheckme.custom-switch.custom-switch-text .custom-control-label:before, .customcheckme.custom-switch.custom-switch-text .custom-control-label:after {
+    top: 6px;
+}
+.iq-sidebar-logo img {
+    height: 60px;
+    width: 85%;
+}
