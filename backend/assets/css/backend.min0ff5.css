@@ -6,7 +6,17 @@
 * NOTE: This file contains the styling for responsive Template.
 *
 */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap");
+@import url("https://fonts.googleapis.com/css2?family=SansArabiclight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap");
+@font-face {
+    font-family: SansArabiclight;
+    src: url(../vendor/arfonts/TheSansArabic-Light.otf);
+}
+
+@font-face {
+    font-family: SansArabicbold;
+    src: url(../vendor/arfonts/TheSansArabic-Bold.ttf);
+}
+
 :root {
   --iq-primary: #dff6f8;
   --iq-secondary: #ccced2;
@@ -71,11 +81,10 @@ body{
     direction: rtl;
 }
 html {
-  font-family: sans-serif;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
- 
+    font-family: SansArabiclight;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 article,
@@ -249,10 +258,11 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  text-align:right
 }
 button,
 input {
-  overflow: visible;
+  overflow:auto;
 }
 button,
 select {
@@ -4850,7 +4860,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: Poppins, sans-serif;
+  font-family: SansArabiclight, sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4956,7 +4966,7 @@ a.close.disabled {
   left: 0;
   z-index: 1060;
   max-width: 276px;
-  font-family: Poppins, sans-serif;
+  font-family: SansArabiclight, sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -10161,7 +10171,7 @@ body.sidebar-main .iq-top-navbar {
 }
 .btn {
   display: inline-block;
-  font-family: Poppins, sans-serif;
+  font-family: SansArabiclight, sans-serif;
   font-weight: 400;
   color: #535f6b;
   text-align: center;
@@ -15205,7 +15215,7 @@ body.swal2-toast-column .swal2-toast .swal2-validation-message {
   width: 4px !important;
 }
 body {
-  font-family: Poppins, sans-serif;
+  font-family: SansArabiclight, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -15225,7 +15235,7 @@ a:hover {
   margin-bottom: 30px !important;
 }
 h1 {
-  font-family: Poppins, sans-serif;
+  font-family: SansArabiclight, sans-serif;
   font-weight: 500;
   margin: 0;
   line-height: 1;
@@ -15236,7 +15246,7 @@ h1 a {
   color: inherit;
 }
 h2 {
-  font-family: Poppins, sans-serif;
+  font-family: SansArabiclight, sans-serif;
   font-weight: 500;
   margin: 0;
   line-height: 1.5;
@@ -15247,7 +15257,7 @@ h2 a {
   color: inherit;
 }
 h3 {
-  font-family: Poppins, sans-serif;
+  font-family: SansArabiclight, sans-serif;
   font-weight: 500;
   line-height: 1.5;
   font-size: 1.953em a;
@@ -15259,7 +15269,7 @@ h4 {
   color: #303030;
 }
 h4 {
-  font-family: Poppins, sans-serif;
+  font-family: SansArabiclight, sans-serif;
   font-weight: 500;
   line-height: 1;
   font-size: 1.2em;
@@ -15268,7 +15278,7 @@ h4 a {
   color: inherit;
 }
 h5 {
-  font-family: Poppins, sans-serif;
+  font-family: SansArabiclight, sans-serif;
   font-weight: 500;
   margin: 0;
   line-height: 1.5;
@@ -15279,7 +15289,7 @@ h5 a {
   color: inherit;
 }
 h6 {
-  font-family: Poppins, sans-serif;
+  font-family: SansArabiclight, sans-serif;
   font-weight: 500;
   margin: 0;
   line-height: 1.5;
@@ -23703,3 +23713,4 @@ table.dataTable th {
 .cropper-disabled .cropper-point {
   cursor: not-allowed;
 }
+h1,h2,h3,h4,h5,h6{font-family:SansArabicbold}
