@@ -100,6 +100,20 @@
         input[type=number] {
             -moz-appearance: textfield;
         }
+        .button-minus {
+            top: 0;
+            z-index: 9;
+            bottom: 0;
+            border: 1px;
+        }
+        .button-plus {
+            position: absolute;
+            bottom: 0;
+            z-index: 9;
+            right: 0;
+            top: 0;
+            border: 1px;
+        }
     </style>
 </head>
 
@@ -594,7 +608,7 @@
                                 <h5 class="mb-0">
                                     <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
                                             aria-expanded="true" aria-controls="collapseOne" style="font-size: 20px; font-weight: 700px;">
-                                        <i class="fa fa-plus"></i>
+                                        <i class="fas fa-plus"></i>
                                         البايانات الاساسيه
                                     </button>
                                 </h5>
@@ -652,7 +666,7 @@
                             <h5 class="mb-0">
                                 <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
                                         aria-expanded="true" aria-controls="collapseTwo" style="font-size: 20px; font-weight: 700px;">
-                                    <i class="fa fa-plus"></i>
+                                    <i class="fas fa-plus"></i>
                                     بيانات  الاتصال
                                 </button>
                             </h5>
@@ -717,7 +731,7 @@
                                 <h5 class="mb-0">
                                     <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree"
                                             aria-expanded="true" aria-controls="collapseThree" style="font-size: 20px; font-weight: 700px;">
-                                        <i class="fa fa-plus"></i>
+                                        <i class="fas fa-plus"></i>
                                         بيانات المستندات الرسميه
                                     </button>
                                 </h5>
@@ -741,7 +755,7 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td contenteditable="true">
+                                                    <td contenteditable="true"  class="empty">
                                                         <select class="js-example-basic-single templatingSelect2 select2 choose-document" name="state" style="padding:10px 20px !important; margin-top:10px">
                                                             <option value="AL">اختر </option>
                                                             <option value="AL">Alabama</option>
@@ -750,14 +764,14 @@
                                                     </td>
                                                     <td contenteditable="true">
                                                         <div class="input-group plusminus">
-                                                            <button type="button"  class="button-minus" data-field="quantity" style="position:absolute;top:0;z-index:9"><i class="fas fa-plus"></i></button>
+                                                            <button type="button"  class="button-plus" data-field="quantity" style="position:absolute;top:0;z-index:9"><i class="fas fa-plus"></i></button>
                                                             <input type="text" step="1" max="" value="1" name="quantity" class="quantity-field" style="position: relative;  margin-right: 18px;" />
-                                                            <button type="button" class="button-plus" data-field="quantity" style="position:absolute;bottom:0;z-index:9;left:0"><i class="fas fa-minus"></i></button>
+                                                            <button type="button" class="button-minus" data-field="quantity" style="position:absolute;bottom:0;z-index:9;left:0"><i class="fas fa-minus"></i></button>
                                                         </div>
                                                     </td>
-                                                    <td contenteditable="true"><input type="text" /></td>
-                                                    <td contenteditable="true"><input type="text" class="datepicker"></td>
-                                                    <td contenteditable="true"><input type="text" class="datepicker"></td>
+                                                    <td contenteditable="true"><input type="text"  class="empty"/></td>
+                                                    <td contenteditable="true"><input type="text" class="datepicker empty"></td>
+                                                    <td contenteditable="true"><input type="text" class="datepicker empty"></td>
                                                     <td contenteditable="true">
                                                         <label for="file-upload" class="custom-file-upload">
                                                             <i class="fas fa-cloud"></i> Upload file
@@ -788,7 +802,7 @@
                                 <h5 class="mb-0">
                                     <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour"
                                             aria-expanded="true" aria-controls="collapseFour" style="font-size: 20px; font-weight: 700px;">
-                                        <i class="fa fa-plus"></i>
+                                        <i class="fas fa-plus"></i>
                                         بيانات  الاعتماد
                                     </button>
                                 </h5>
@@ -812,13 +826,13 @@
                                                 <tr>
                                                     <td contenteditable="true">
                                                         <div class="input-group plusminus">
-                                                            <button type="button" class="button-plus" data-field="quantity" style="position:absolute;top:0;z-index:9"><i class="fas fa-plus"></i></button>
+                                                            <button type="button" class="button-plus" data-field="quantity" ><i class="fas fa-plus"></i></button>
                                                             <input type="text"  max="" value="1" name="quantity" class="quantity-field" style="position: relative;  margin-right: 18px;" />
-                                                            <button type="button" class="button-minus" data-field="quantity" style="position:absolute;bottom:0;z-index:9;left:0"><i class="fas fa-minus"></i></button>
+                                                            <button type="button" class="button-minus" data-field="quantity" ><i class="fas fa-minus"></i></button>
                                                         </div>
                                                     </td>
-                                                    <td contenteditable="true"> <input type="text" class="datepicker"></td>
-                                                    <td contenteditable="true">
+                                                    <td contenteditable="true" class="empty"> <input type="text" class="datepicker"></td>
+                                                    <td contenteditable="true" class="empty">
                                                         <label for="upload" class="custom-file-upload">
                                                             <i class="fas fa-cloud"></i> Upload file
                                                         </label>
@@ -919,25 +933,39 @@
     <script>
         $(document).ready(function () {
             $(".collapse.show").each(function () {
-                $(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+                $(this).prev(".card-header").find(".fas").addClass("fa-minus").removeClass("fa-plus");
             });
             $(".collapse").on('show.bs.collapse', function () {
-                $(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+                $(this).prev(".card-header").find(".fas").removeClass("fa-plus").addClass("fa-minus");
             }).on('hide.bs.collapse', function () {
-                $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+                $(this).prev(".card-header").find(".fas").removeClass("fa-minus").addClass("fa-plus");
             });
         });
-        $('#file-upload').change(function () {
-            var i = $(this).prev('label').clone();
-            var file = $('#file-upload')[0].files[0].name;
-            $(this).prev('label').text(file);
-        });
-        $('#upload').change(function () {
-            var i = $(this).prev('label').clone();
-            var file = $('#upload')[0].files[0].name;
-            $(this).prev('label').text(file);
-        });
+        //$('.file-upload').change(function () {
+        //    var i = $(this).prev('label').clone();
+        //    var file = $('.file-upload')[0].files[0].name;
+        //    $(this).prev('label').text(file);
+        //});
+        //$('.upload').change(function () {
+        //    var i = $(this).prev('label').clone();
+        //    var file = $('.upload')[0].files[0].name;
+        //    $(this).prev('label').text(file);
+        //});
     </script>
+
+    <script>
+            $(document).ready(function () {
+                $(".main-files").on('click', ".file-upload", function () {
+                    if ($(this).closest("tbody").children("tr:last-child").children("td:last-child").children(".file-upload").length != 0) {
+                        var i = $(this).prev('label').clone();
+                        var file = $('.file-upload')[0].files[0].name;
+                        $(this).prev('label').text(file);
+                    }
+                })
+            })
+
+    </script>
+
 
     <script>
         $(document).ready(function () {
@@ -947,10 +975,13 @@
             })
             $('.plusminus').on('click', '.button-minus', function () {
                 var $input = $(this).siblings('input');
-                var $count = $input.val(parseInt($input.val()) - 1);
-                if ($count > 0) {
-                    $input.val(parseInt($input.val()) - 1)
+                var count = parseInt($input.val());
+                if (count > 0) {
+                    var newval = $input.val(parseInt($input.val()) - 1)
+                } else {
+                    newval=0
                 }
+              
             })
             }
         );
@@ -967,7 +998,7 @@
                 $(this).closest("tbody").children("tr:last-child").children("td").children(".choose-document").val($(this).closest("tbody").children("tr:last-child").children("td").children(".choose-document option:first-child").val());
 
                 $(this).closest("tbody").children("tr").children("td").children(".choose-document").select2();
-                $(this).closest("tbody").children("tr:last-child").children("td").find("input").val("");
+                $(this).closest("tbody").children("tr:last-child").children("td").find(".empty").val("");
                 $(this).closest("tbody").children("tr:last-child").children("td:eq(5)").html(`                                                        <label for="file-upload" class="custom-file-upload">
                                                                             <i class="fas fa-cloud"></i> Upload file
                                                                         </label>
@@ -1027,8 +1058,7 @@
         $(document).ready(function () {
             $(".main-data").on("click", ".btn-addnew", function () {
                 $(this).closest("tbody").append($(this).closest("tr").clone());
-                $(this).closest("tbody").children("tr:last-child").children("td").children(".input-group").removeClass("quantity-field");
-                $(this).closest("tbody").children("tr:last-child").children("td").children(".input-group").siblings(".quantity-field").remove();
+                
 
 
                 $(this).closest("tbody").children("tr:last-child").children("td").children(".datepicker").removeClass("picker__input").removeClass("picker__input--active");
@@ -1036,7 +1066,8 @@
                 $(this).closest("tbody").children("tr:last-child").children("td").children(".datepicker").removeAttr("id").removeAttr("aria-owns");
                 $(this).closest("tbody").children("tr:last-child").children("td").children(".choose-document").val($(this).closest("tbody").children("tr:last-child").children("td").children(".choose-document option:first-child").val());
 
-                $(this).closest("tbody").children("tr:last-child").children("td").find("input").val("");
+                $(this).closest("tbody").children("tr:last-child").children("td").find(".empty").val("");
+
                 $(this).closest("tbody").children("tr:last-child").children("td:eq(5)").html(`                                                        <label for="file-upload" class="custom-file-upload">
                                                                             <i class="fas fa-cloud"></i> Upload file
                                                                         </label>
