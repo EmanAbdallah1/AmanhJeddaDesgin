@@ -319,3 +319,14 @@ h4 {
 }
 
 
+@media (max-width: 1299px) {
+    .iq-sidebar {
+        right: -300px;
+        left: auto;
+    }
+
+    body.sidebar-main .iq-sidebar {
+        right: 0;
+        left: auto;
+    }
+}

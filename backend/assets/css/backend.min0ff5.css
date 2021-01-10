@@ -15491,6 +15491,7 @@ g[aria-describedby="id-22-description"] {
   .content-page {
     margin-left: 0;
     padding: 100px 15px 0;
+    width: 100%;
   }
 }
 @media (max-width: 991px) {
@@ -23714,3 +23715,4 @@ table.dataTable th {
   cursor: not-allowed;
 }
 h1,h2,h3,h4,h5,h6{font-family:SansArabicbold}
+.wrapper-menu{cursor:pointer}
