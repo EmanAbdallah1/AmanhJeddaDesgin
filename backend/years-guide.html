@@ -21,8 +21,8 @@
         <link rel='stylesheet' href='assets/vendor/fullcalendar/list/main.css' />
         <link rel="stylesheet" href="assets/vendor/mapbox/mapbox-gl.css">
         <link rel="stylesheet" href="assets/css/style.css" />
-
         <link rel="stylesheet" href="assets/css/rtl.css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet" />
 
     </head>
 
@@ -177,16 +177,7 @@
                                                                             <i class="las la-user-cog"></i><span>دليل  سنوات الصنع</span>
                                                                         </a>
                                                                     </li>
-                                                                    <li class=" ">
-                                                                        <a href="company-guide.html">
-                                                                            <i class="las la-user-cog"></i><span>دليل ورش الصيانه</span>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li class=" ">
-                                                                        <a href="company-guide.html">
-                                                                            <i class="las la-user-cog"></i><span>دليل  الصيانات الدوريه</span>
-                                                                        </a>
-                                                                    </li>
+
                                                                 </ul>
                                                             </li>
                                                         </ul>
@@ -217,7 +208,7 @@
                     </div>
                     <div class="p-3"></div>
                 </div>
-            </div>  
+            </div>
             <div class="iq-top-navbar">
                 <div class="iq-navbar-custom">
                     <nav class="navbar navbar-expand-lg navbar-light p-0">
@@ -546,10 +537,10 @@
                     <div class="row">
                         <div class="col-sm-12 col-lg-12">
                             <div class="card">
-                                
+
                                 <div class="card-header d-flex justify-content-between">
                                     <div class="header-title">
-                                        <h4 class="card-title">دليل المناطق </h4>
+                                        <h4 class="card-title">دليل سنوات الصنع </h4>
                                     </div>
                                     <div class="">
 
@@ -565,40 +556,13 @@
 
                                 </div>
                                 <div class="card-body">
-                                    <ul class="nav nav-tabs" id="myTab-1" role="tablist">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">العربية</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">English</a>
-                                        </li>
-
-                                    </ul>
-                                    <div class="tab-content" id="myTabContent-2">
-                                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                            <div class="col-sm-12 col-lg-12">
-                                             
-                                                        <form>
-                                                            <div class="form-group">
-                                                                <label for="text">اسم المنطقة</label>
-                                                                <input type="text" class="form-control" id="email1">
-                                                            </div>
-                                                        </form>
-                                                   
+                                    <div class="col-sm-12 col-lg-12">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="text"> السنة</label>
+                                                <input type="text" id="datepicker" />
                                             </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                            <div class="col-sm-12 col-lg-12">
-                                            
-                                                        <form>
-                                                            <div class="form-group">
-                                                                <label for="text">اسم المنطقة</label>
-                                                                <input type="text" class="form-control" id="email1">
-                                                            </div>
-                                                        </form>
-                                                   
-                                            </div>
-                                        </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -667,6 +631,16 @@
         <!-- app JavaScript -->
         <script src="assets/js/app.js"></script>
         <script src="assets/js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+
+        <script>
+            $("#datepicker").datepicker({
+                format: "yyyy",
+                viewMode: "years",
+                minViewMode: "years"
+            });
+        </script>
     </body>
 
 </html>
