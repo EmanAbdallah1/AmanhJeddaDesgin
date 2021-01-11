@@ -329,4 +329,17 @@ h4 {
         right: 0;
         left: auto;
     }
+
+  
+}
+table.dataTable tfoot th {
+    padding: 35px 18px 6px;
+    border-top: 1px solid #111;
+}
+
+table.dataTable tbody td, table.dataTable tbody th {
+    padding: 9px 18px 6px;
+}
+.dataTables_wrapper .dataTables_length label, .dataTables_wrapper .dataTables_length select {
+    border-color: none !important;
 }

@@ -15737,7 +15737,7 @@ table.dataTable.no-footer {
 }
 .dataTables_wrapper .dataTables_length label,
 .dataTables_wrapper .dataTables_length select {
-  border-color: #f1f1f1 !important;
+  border-color: none !important;
 }
 .custom-control-label:after,
 .custom-control-label:before {
@@ -23716,3 +23716,6 @@ table.dataTable th {
 }
 h1,h2,h3,h4,h5,h6{font-family:SansArabicbold}
 .wrapper-menu{cursor:pointer}
+.dataTables_wrapper .dataTables_length label, .dataTables_wrapper .dataTables_length select {
+    border-color: none !important;
+}
