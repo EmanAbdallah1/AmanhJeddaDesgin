@@ -114,6 +114,27 @@
             top: 0;
             border: 1px;
         }
+        .accordion > .card > .card-header{
+            position:relative;
+        }
+        .accordion h5 .fa-plus {
+            position: absolute;
+            left: 0;
+            margin-left:12px
+        }
+        .accordion h5 .fa-minus {
+            position: absolute;
+            left: 0;
+            margin-left:12px
+        }
+        .accordion span {
+            font-weight: 400;
+            color: #05bbc9;
+            text-decoration: none;
+        }
+            .accordion span:hover {
+                color: #03767e;
+            }
     </style>
 </head>
 
@@ -600,21 +621,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-lg-12">
+         
 
-                    <div id="accordion">
+                    <div class="accordion">
                         <div class="card">
-                            <div class="card-header" id="headingOne">
+                            <div class="card-header  btn-accordion">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                                            aria-expanded="true" aria-controls="collapseOne" style="font-size: 20px; font-weight: 700px;">
-                                        <i class="fas fa-plus"></i>
-                                        البايانات الاساسيه
-                                    </button>
+                                    <i class="fas fa-minus icon"></i>
+                                    <span> البيانات الاساسيه</span>
+
                                 </h5>
                             </div>
 
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="accordion-body" style="padding:15px">
                                 <form>
 
                                     <div class="row">
@@ -659,19 +678,17 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div id="accordion">
+               
+                <div class="accordion">
                     <div class="card">
-                        <div class="card-header" id="headingTwo">
+                        <div class="card-header  btn-accordion">
                             <h5 class="mb-0">
-                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
-                                        aria-expanded="true" aria-controls="collapseTwo" style="font-size: 20px; font-weight: 700px;">
-                                    <i class="fas fa-plus"></i>
-                                    بيانات  الاتصال
-                                </button>
+                                <i class="fas fa-minus icon"></i>
+                                <span> بيانات الاتصال </span>
+
                             </h5>
                         </div>
-                        <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="accordion-body">
                             <div class="col-sm-12">
                                 <div id="table" class="table-editable">
 
@@ -707,12 +724,12 @@
                                                         <i class="fas fa-plus"></i>
                                                     </button>
                                                     <!--<span class="table-remove">
-       <button type="button"
-               class="btn bg-danger-light btn-rounded btn-sm my-0">
-           <i class="fas fa-trash-alt"></i>
-       </button>
+                                                       <button type="button"
+                                                               class="btn bg-danger-light btn-rounded btn-sm my-0">
+                                                           <i class="fas fa-trash-alt"></i>
+                                                       </button>
 
-    </span>-->
+                                                    </span>-->
 
 
                                                 </td>
@@ -725,18 +742,16 @@
                         </div>
                     </div>
 
-                    <div id="accordion">
+                    <div class="accordion">
                         <div class="card">
-                            <div class="card-header" id="headingThree">
+                            <div class="card-header  btn-accordion">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree"
-                                            aria-expanded="true" aria-controls="collapseThree" style="font-size: 20px; font-weight: 700px;">
-                                        <i class="fas fa-plus"></i>
-                                        بيانات المستندات الرسميه
-                                    </button>
+                                    <i class="fas fa-minus icon"></i>
+                                    <span> بيانات  المستندات الرسميه</span>
+
                                 </h5>
                             </div>
-                            <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="accordion-body">
                                 <div class="col-sm-12">
 
                                     <div id="table" class="table-editable" style="overflow:scroll">
@@ -755,7 +770,7 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td contenteditable="true"  class="empty">
+                                                    <td contenteditable="true" class="empty">
                                                         <select class="js-example-basic-single templatingSelect2 select2 choose-document" name="state" style="padding:10px 20px !important; margin-top:10px">
                                                             <option value="AL">اختر </option>
                                                             <option value="AL">Alabama</option>
@@ -764,12 +779,12 @@
                                                     </td>
                                                     <td contenteditable="true">
                                                         <div class="input-group plusminus">
-                                                            <button type="button"  class="button-plus" data-field="quantity" style="position:absolute;top:0;z-index:9"><i class="fas fa-plus"></i></button>
+                                                            <button type="button" class="button-plus" data-field="quantity" style="position:absolute;top:0;z-index:9"><i class="fas fa-plus"></i></button>
                                                             <input type="text" step="1" max="" value="1" name="quantity" class="quantity-field" style="position: relative;  margin-right: 18px;" />
                                                             <button type="button" class="button-minus" data-field="quantity" style="position:absolute;bottom:0;z-index:9;left:0"><i class="fas fa-minus"></i></button>
                                                         </div>
                                                     </td>
-                                                    <td contenteditable="true"><input type="text"  class="empty"/></td>
+                                                    <td contenteditable="true"><input type="text" class="empty" /></td>
                                                     <td contenteditable="true"><input type="text" class="datepicker empty"></td>
                                                     <td contenteditable="true"><input type="text" class="datepicker empty"></td>
                                                     <td contenteditable="true">
@@ -796,19 +811,17 @@
                             </div>
                         </div>
                     </div>
-                    <div id="accordion">
+                    <div class="accordion">
                         <div class="card">
-                            <div class="card-header" id="headingFour">
+                            <div class="card-header  btn-accordion">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour"
-                                            aria-expanded="true" aria-controls="collapseFour" style="font-size: 20px; font-weight: 700px;">
-                                        <i class="fas fa-plus"></i>
-                                        بيانات  الاعتماد
-                                    </button>
+                                    <i class="fas fa-minus icon"></i>
+                                    <span> بيانات  الاعتماد</span>
+
                                 </h5>
                             </div>
 
-                            <div id="collapseFour" class="collapse show " aria-labelledby="headingFour" data-parent="#accordion">
+                            <div class="accordion-body">
                                 <div class="col-sm-12">
                                     <div id="table" class="table-editable">
 
@@ -826,9 +839,9 @@
                                                 <tr>
                                                     <td contenteditable="true">
                                                         <div class="input-group plusminus">
-                                                            <button type="button" class="button-plus" data-field="quantity" ><i class="fas fa-plus"></i></button>
-                                                            <input type="text"  max="" value="1" name="quantity" class="quantity-field" style="position: relative;  margin-right: 18px;" />
-                                                            <button type="button" class="button-minus" data-field="quantity" ><i class="fas fa-minus"></i></button>
+                                                            <button type="button" class="button-plus" data-field="quantity"><i class="fas fa-plus"></i></button>
+                                                            <input type="text" max="" value="1" name="quantity" class="quantity-field" style="position: relative;  margin-right: 18px;" />
+                                                            <button type="button" class="button-minus" data-field="quantity"><i class="fas fa-minus"></i></button>
                                                         </div>
                                                     </td>
                                                     <td contenteditable="true" class="empty"> <input type="text" class="datepicker"></td>
@@ -932,14 +945,10 @@
     <script src="assets/js/all.js"></script>
     <script>
         $(document).ready(function () {
-            $(".collapse.show").each(function () {
-                $(this).prev(".card-header").find(".fas").addClass("fa-minus").removeClass("fa-plus");
-            });
-            $(".collapse").on('show.bs.collapse', function () {
-                $(this).prev(".card-header").find(".fas").removeClass("fa-plus").addClass("fa-minus");
-            }).on('hide.bs.collapse', function () {
-                $(this).prev(".card-header").find(".fas").removeClass("fa-minus").addClass("fa-plus");
-            });
+            $(".btn-accordion").on("click", function () {
+                $(this).children("h5").children(".icon").toggleClass("fa-minus").toggleClass("fa-plus");
+                $(this).siblings(".accordion-body").fadeToggle(100);
+            })
         });
         //$('.file-upload').change(function () {
         //    var i = $(this).prev('label').clone();
@@ -954,18 +963,40 @@
     </script>
 
     <script>
-            $(document).ready(function () {
-                $(".main-files").on('click', ".file-upload", function () {
-                    if ($(this).closest("tbody").children("tr:last-child").children("td:last-child").children(".file-upload").length != 0) {
-                        var i = $(this).prev('label').clone();
-                        var file = $('.file-upload')[0].files[0].name;
-                        $(this).prev('label').text(file);
-                    }
-                })
+        $(document).ready(function () {
+            $(".main-files").on('click', ".custom-file-upload", function () {
+                $(this).siblings(".file-upload").click();
             })
+            $(".main-files").on('change', ".file-upload", function () {
+                var numfirst = 0;
+                if ($(this).val().indexOf('/') > 0) {
+                    numfirst = $(this).val().lastIndexOf('/');
+                } else if ($(this).val().indexOf('\\') > 0) {
+                    numfirst = $(this).val().lastIndexOf('\\');
+                }
+                $(this).siblings(".custom-file-upload").html($(this).val().slice(numfirst + 1));
+            })
+        })
 
     </script>
 
+    <script>
+        $(document).ready(function () {
+            $(".main-data").on('click', ".custom-file-upload", function () {
+                $(this).siblings(".upload").click();
+            })
+            $(".main-data").on('change', ".upload", function () {
+                var numfirst = 0;
+                if ($(this).val().indexOf('/') > 0) {
+                    numfirst = $(this).val().lastIndexOf('/');
+                } else if ($(this).val().indexOf('\\') > 0) {
+                    numfirst = $(this).val().lastIndexOf('\\');
+                }
+                $(this).siblings(".custom-file-upload").html($(this).val().slice(numfirst + 1));
+            })
+        })
+
+    </script>
 
     <script>
         $(document).ready(function () {
@@ -979,11 +1010,11 @@
                 if (count > 0) {
                     var newval = $input.val(parseInt($input.val()) - 1)
                 } else {
-                    newval=0
+                    newval = 0
                 }
-              
+
             })
-            }
+        }
         );
     </script>
     <script>
@@ -1000,15 +1031,15 @@
                 $(this).closest("tbody").children("tr").children("td").children(".choose-document").select2();
                 $(this).closest("tbody").children("tr:last-child").children("td").find(".empty").val("");
                 $(this).closest("tbody").children("tr:last-child").children("td:eq(5)").html(`                                                        <label for="file-upload" class="custom-file-upload">
-                                                                            <i class="fas fa-cloud"></i> Upload file
-                                                                        </label>
-                                                                        <input id="file-upload" name='upload_cont_img' type="file" style="display:none;">
+                                                                                <i class="fas fa-cloud"></i> Upload file
+                                                                            </label>
+                                                                            <input id="file-upload" name='upload_cont_img' type="file" style="display:none;">
 `);
                 if ($(this).closest("tbody").children("tr:last-child").children("td:last-child").children(".btn-delnew").length == 0) {
                     $(this).closest("tbody").children("tr:last-child").children("td:last-child").append(`<button type="button"
-                                                                                class="btn bg-danger-light btn-rounded btn-sm my-0 btn-delnew">
-                                                                            <i class="fas fa-trash-alt"></i>
-                                                                        </button>`);
+                                                                                    class="btn bg-danger-light btn-rounded btn-sm my-0 btn-delnew">
+                                                                                <i class="fas fa-trash-alt"></i>
+                                                                            </button>`);
                 }
                 $(this).closest("tbody").children("tr:last-child").find(".datepicker").pickadate({
                     format: 'mm/dd/yyyy',
@@ -1058,7 +1089,7 @@
         $(document).ready(function () {
             $(".main-data").on("click", ".btn-addnew", function () {
                 $(this).closest("tbody").append($(this).closest("tr").clone());
-                
+
 
 
                 $(this).closest("tbody").children("tr:last-child").children("td").children(".datepicker").removeClass("picker__input").removeClass("picker__input--active");
@@ -1069,14 +1100,14 @@
                 $(this).closest("tbody").children("tr:last-child").children("td").find(".empty").val("");
 
                 $(this).closest("tbody").children("tr:last-child").children("td:eq(5)").html(`                                                        <label for="file-upload" class="custom-file-upload">
-                                                                            <i class="fas fa-cloud"></i> Upload file
-                                                                        </label>
-                                                                        <input id="file-upload" name='upload_cont_img' type="file" style="display:none;">`);
+                                                                                <i class="fas fa-cloud"></i> Upload file
+                                                                            </label>
+                                                                            <input id="file-upload" name='upload_cont_img' type="file" style="display:none;">`);
                 if ($(this).closest("tbody").children("tr:last-child").children("td:last-child").children(".btn-delnew").length == 0) {
                     $(this).closest("tbody").children("tr:last-child").children("td:last-child").append(`<button type="button"
-                                                                                class="btn bg-danger-light btn-rounded btn-sm my-0 btn-delnew">
-                                                                            <i class="fas fa-trash-alt"></i>
-                                                                        </button>`);
+                                                                                    class="btn bg-danger-light btn-rounded btn-sm my-0 btn-delnew">
+                                                                                <i class="fas fa-trash-alt"></i>
+                                                                            </button>`);
                 }
                 $(this).closest("tbody").children("tr:last-child").find(".datepicker").pickadate({
                     format: 'mm/dd/yyyy',
@@ -1132,18 +1163,18 @@
 
                 $(this).closest("tbody").children("tr").children("td").children(".choose-document").select2();
                 $(this).closest("tbody").children("tr:last-child").children("td").find("input").val("");
-               
+
                 if ($(this).closest("tbody").children("tr:last-child").children("td:last-child").children(".btn-delnew").length == 0) {
                     $(this).closest("tbody").children("tr:last-child").children("td:last-child").append(`<button type="button"
-                                                                                    class="btn bg-danger-light btn-rounded btn-sm my-0 btn-delnew">
-                                                                                <i class="fas fa-trash-alt"></i>
-                                                                            </button>`);
+                                                                                        class="btn bg-danger-light btn-rounded btn-sm my-0 btn-delnew">
+                                                                                    <i class="fas fa-trash-alt"></i>
+                                                                                </button>`);
                 }
             })
             $(".main-contact").on("click", ".btn-delnew", function () {
                 $(this).closest("tr").remove();
             })
-          
+
 
         });
 
