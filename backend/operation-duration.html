@@ -20,22 +20,27 @@
         <link rel='stylesheet' href='assets/vendor/fullcalendar/timegrid/main.css' />
         <link rel='stylesheet' href='assets/vendor/fullcalendar/list/main.css' />
         <link rel="stylesheet" href="assets/vendor/mapbox/mapbox-gl.css">
+
+        <link href="assets/vendor/select2/select2.css" rel="stylesheet" />
         <link rel="stylesheet" href="assets/css/style.css" />
+
         <link rel="stylesheet" href="assets/css/rtl.css" />
-        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
-   <style>
-       .templatingSelect2.select2{
-           width:100%
-       }
-       .select2-container {
-           box-sizing: border-box;
-           display: inline-block;
-           margin: 0;
-           position: absolute;
-           vertical-align: middle;
-           left: 100px;
-       }
-   </style>
+        <style>
+          
+            .form-control {
+                width: 100% !important;
+            }
+            .templatingSelect2.select2 {
+                width: 100% !important;
+            }
+            .row{
+                margin-top:10px
+            }
+            .tab-pane .templatingSelect2.select2 {
+                width: 100% !important;
+            }
+        </style>
+
     </head>
 
     <body class=" color-light ">
@@ -238,7 +243,7 @@
                                                                             <i class="las la-user-cog"></i><span>العمليات</span>
                                                                         </a>
                                                                     </li>
-                                                                 
+
 
                                                                 </ul>
                                                             </li>
@@ -281,6 +286,7 @@
                             <div class="p-3"></div>
                         </div>
                     </nav>
+
                     <div id="sidebar-bottom" class="position-relative sidebar-bottom">
                         <div class="card bg-primary rounded">
                             <div class="card-body">
@@ -295,8 +301,7 @@
                     </div>
                     <div class="p-3"></div>
                 </div>
-            </div>
-            <div class="iq-top-navbar">
+            </div>       <div class="iq-top-navbar">
                 <div class="iq-navbar-custom">
                     <nav class="navbar navbar-expand-lg navbar-light p-0">
                         <div class="iq-navbar-logo d-flex align-items-center justify-content-between">
@@ -622,64 +627,189 @@
             <div class="content-page">
                 <div class="container-fluid">
                     <div class="row">
-
                         <div class="col-sm-12 col-lg-12">
                             <div class="card">
                                 <div class="card-header d-flex justify-content-between">
                                     <div class="header-title">
-                                        <h4 class="card-title" style="margin-top:6px !important">الاحياء  </h4>
+                                        <h4 class="card-title" style="margin-top:6px !important">انشاء فتره  </h4>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-12 col-lg-12">
+                            <div class="card" style="padding: 19px;">
+
+                                <div class="row">
+                                    <div class="col-sm-12 col-lg-2">
+                                        <h4 for="text" style="text-align:right"> اسم الفتره</h4>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-4">
+                                        <input type="text" class="form-control" id="time">
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-sm-12 col-lg-2">
+                                        <h4 class="card-title" style=" margin-top: 12px;">بدايه الفتره باليوم  </h4>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-4">
+                                        <select class="templatingSelect2 select2" name="state" style="padding:10px 20px !important">
+                                            <option value="AL">اختر </option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-sm-12 col-lg-2">
+                                        <h4 class="card-title" style=" margin-top: 12px;">نهايه الفتره باليوم  </h4>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-4">
+                                        <select class="templatingSelect2 select2" name="state" style="padding:10px 20px !important">
+                                            <option value="AL">اختر </option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                  
-                            <div class="col-sm-12 col-lg-12">
-                                <div class="card" style="padding: 19px;">
-                                    <div class="row">
-
-                                        <div class="col-sm-12 col-lg-3">
-                                            <h6 class="card-title" style=" margin-top: 12px;">اختر نوع العقد </h6>
-                                        </div>
-                                        <div class="col-sm-12 col-lg-4">
-                                            <select class="templatingSelect2 select2" style="padding:10px 20px !important">
-                                                <option value="AL">اختر </option>
-                                                <option value="AL">Alabama</option>
-                                                <option value="WY">Wyoming</option>
-                                            </select>
-                                        </div>
+                        <div class="col-sm-12 col-lg-12">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="header-title">
+                                        <h4 class="card-title" style="margin-top:6px !important">عمليات فتح فتره او اغلاق فتره  </h4>
                                     </div>
-                                    <div class="row" style="margin-top:10px">
 
-                                        <div class="col-sm-12 col-lg-3">
-                                            <h6 class="card-title" style=" margin-top: 12px;">اختر  العقد  </h6>
-                                        </div>
-                                        <div class="col-sm-12 col-lg-4">
-                                            <select class="templatingSelect2 select2" style="padding:10px 20px !important" >
-                                                <option value="AL">اختر </option>
-                                                <option value="AL">Alabama</option>
-                                                <option value="WY">Wyoming</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row" style="margin-top:10px">
+                                </div>
+                            </div>
+                        </div>
 
-                                        <div class="col-sm-12 col-lg-3">
-                                            <h6 class="card-title" style=" margin-top: 12px;">اختر الاحياء المتعدده </h6>
+
+                        <div class="col-sm-12 col-lg-12">
+                            <div class="card">
+
+                                <div class="card-body">
+                                    <ul class="nav nav-tabs" id="myTab-1" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">العربية</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">English</a>
+                                        </li>
+
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent-2">
+                                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                                            <div class="row">
+
+                                                <div class="col-sm-12 col-lg-2">
+                                                    <h4 class="card-title" style=" margin-top: 12px;">  اختر الفتره  </h4>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-4">
+                                                    <select class="templatingSelect2 select2" name="state" style="padding:10px 20px !important">
+                                                        <option value="AL">اختر </option>
+                                                        <option value="AL">Alabama</option>
+                                                        <option value="WY">Wyoming</option>
+                                                    </select>
+                                                </div>
+                                          
+
+                                          
+                                                <div class="col-sm-12 col-lg-2">
+                                                    <h4 class="card-title" style=" margin-top: 12px;">اختر  العقد  </h4>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-4">
+                                                    <select class="templatingSelect2 select2" name="state" style="padding:10px 20px !important">
+                                                        <option value="AL">اختر </option>
+                                                        <option value="AL">Alabama</option>
+                                                        <option value="WY">Wyoming</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row" style=" margin-bottom: 50px; margin-top: 42px;">
+                                                <div class="col-sm-12 col-lg-5">
+                                                    <h4 for="text"> مده الفتح باليوم او مفتوح حتى يتم اغلاقه</h4>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-4">
+                                                    <input type="text" class="form-control" id="time" style=" position: absolute; left: 128px; bottom: -12px;">
+                                                </div>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
+                                                <label class="custom-control-label" for="customCheck6">فتح الاعتراض</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
+                                                <label class="custom-control-label" for="customCheck6">فتح اعتماد غياب العمال</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
+                                                <label class="custom-control-label" for="customCheck6">فتح اعتماد المعدات البيانيه</label>
+                                            </div>
                                         </div>
-                                        <div class="col-sm-12 col-lg-4">
-                                            <select class="templatingSelect2 select2" style="padding:10px 20px !important" name="states[]" multiple="multiple">
-                                                <option value="AL">اختر </option>
-                                                <option value="AL">Alabama</option>
-                                                <option value="WY">Wyoming</option>
-                                            </select>
+                                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                                            <div class="row">
+
+                                                <div class="col-sm-12 col-lg-2">
+                                                    <h4 class="card-title" style=" margin-top: 12px;">  اختر الفتره  </h4>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-4">
+                                                    <select class="templatingSelect2 select2" name="state" style=" width:100%">
+                                                        <option value="AL">اختر </option>
+                                                        <option value="AL">Alabama</option>
+                                                        <option value="WY">Wyoming</option>
+                                                    </select>
+                                                </div>
+                                         
+
+                                            
+                                                <div class="col-sm-12 col-lg-2">
+                                                    <h4 class="card-title" style=" margin-top: 12px;">اختر  العقد  </h4>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-4">
+                                                    <select class="templatingSelect2 select2" name="state" style="width:100%">
+                                                        <option value="AL">اختر </option>
+                                                        <option value="AL">Alabama</option>
+                                                        <option value="WY">Wyoming</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row" style=" margin-bottom: 50px; margin-top: 42px;">
+                                                <div class="col-sm-12 col-lg-5">
+                                                    <h4 for="text"> مده الفتح باليوم او مفتوح حتى يتم اغلاقه</h4>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-4">
+                                                    <input type="text" class="form-control" id="time" style=" position: absolute; left: 128px; bottom: -12px;">
+                                                </div>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
+                                                <label class="custom-control-label" for="customCheck6">فتح الاعتراض</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
+                                                <label class="custom-control-label" for="customCheck6">فتح اعتماد غياب العمال</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
+                                                <label class="custom-control-label" for="customCheck6">فتح اعتماد المعدات البيانيه</label>
+                                            </div>
                                         </div>
+
+
                                     </div>
                                 </div>
                             </div>
-                    
+                        </div>
 
-
-
+                    </div>
                     </div>
                 </div>
             </div>
@@ -688,14 +818,8 @@
         <footer class="iq-footer">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item"><a href="privacy-policy.html">Privacy Policy</a></li>
-                            <li class="list-inline-item"><a href="terms-of-service.html">Terms of Use</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 text-right">
-                        Copyright 2020 <a href="#">Insta Dash</a> All Rights Reserved.
+                    <div class="col-lg-12 text-center">
+                        Copyright 2020 <a href="http://mtx-it.com/">Creative Matrix</a> All Rights Reserved.
                     </div>
                 </div>
             </div>
@@ -739,16 +863,11 @@
 
         <!-- slider JavaScript -->
         <script src="assets/js/slider.js"></script>
+        <script src="assets/vendor/select2/select.js"></script>
 
         <!-- app JavaScript -->
         <script src="assets/js/app.js"></script>
         <script src="assets/js/main.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-  <script>
-      $(document).ready(function () {
-          $('.js-example-basic-multiple').select2();
-      });
-  </script>
     </body>
 
 </html>
