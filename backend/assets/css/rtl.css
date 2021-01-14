@@ -421,3 +421,57 @@ display:none !important
 label{
     text-align:right
 }
+            .form-control {
+                width: 100% !important;
+            }
+            .templatingSelect2.select2 {
+                width: 100% !important;
+            }
+            .row{
+                margin-top:10px
+            }
+         
+            .select2-container {
+           width: 100% !important;
+            }
+    .custom-file-upload {
+      
+            border: 1px solid #ccc;
+            display:block;
+            padding: 6px 12px;
+            cursor: pointer;
+            background: #05bbc9;
+            color: white;
+            text-align:center;
+            width:36%
+        
+        }
+.datepicker {
+    width:85%;
+    border:1px solid #8080806b;
+    padding:5px
+}
+.templatingSelect2{
+    width:85% !important;
+       border:1px solid #8080806b;
+       }
+} .button-minus {
+            top: 0;
+            z-index: 9;
+            bottom: 0;
+            border: 1px;
+                left: 56px !importance;
+            }
+} .button-plus {
+            position: absolute;
+            bottom: 0;
+            z-index: 9;
+            right: 0;
+            top: 0;
+            border: 1px;
+}
+input{
+        width:84%;
+        border:1px solid #8080806b;
+        padding:3px;
+}
