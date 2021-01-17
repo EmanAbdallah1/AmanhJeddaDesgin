@@ -238,9 +238,7 @@ html, body {
     border-bottom-right-radius: 0px;
 }
 
-.form-control {
-    width: 35% ;
-}
+
 
 .templatingSelect2 {
     width: 300px;
@@ -419,5 +417,68 @@ display:none !important
  display: none !important
 }
 label{
-    text-align:right
+    text-align:right;
+    margin-bottom:10px;
+    float:right;
+    clear:both
+        
+}
+.quantity-field {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width:82%
+}
+.picker__input {
+    cursor: default;
+    width: 100%;
+}
+.form-control {
+    width: 100% !important;
+}
+input {
+    border: 1px solid #8080803b;
+    padding: 10px;
+    width:100%
+}
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+.button-minus {
+    top: 0;
+    z-index: 9;
+    bottom: 0;
+    border: 1px;
+}
+
+.button-plus {
+    position: absolute;
+    bottom: 0;
+    z-index: 9;
+    right: 0;
+    top: 0;
+    border: 1px;
+}
+.templatingSelect2 {
+    border-color: #8080803d !important;
+}
+
+.textarea.form-control{
+    width:100% !important
+}
+.select2-container{
+    width:100%!important
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background: #05bbc9;
+    color: white;
+}
+.Tablet{
+    display:flex
+}
+label{
+    display:block
 }

@@ -11,13 +11,3 @@ $(document).ready(function () {
         $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
     });
 });
-$('#file-upload').change(function () {
-    var i = $(this).prev('label').clone();
-    var file = $('#file-upload')[0].files[0].name;
-    $(this).prev('label').text(file);
-});
-$('#upload').change(function () {
-    var i = $(this).prev('label').clone();
-    var file = $('#upload')[0].files[0].name;
-    $(this).prev('label').text(file);
-});
