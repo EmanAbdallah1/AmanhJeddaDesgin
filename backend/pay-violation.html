@@ -630,15 +630,16 @@
                                     <label for="text">
                                         اختر الفتره
                                     </label>
-                                    <select class="js-example-basic-single templatingSelect2 select2" name="state" >
+                                    <div class="custom-control custom-checkbox custom-checkbox-color-check custom-control-inline">
+                                        <input type="checkbox" class="custom-control-input bg-primary" id='chk' checked="">
+                                        <label class="custom-control-label" for="customCheck-1"> حتى الان</label>
+                                    </div>
+                                    <select class="js-example-basic-single templatingSelect2 select2" name="state"  id='inp1'>
                                         <option value="AL">Alabama</option>
 
                                         <option value="WY">Wyoming</option>
                                     </select>
-                                    <div class="custom-control custom-checkbox custom-checkbox-color-check custom-control-inline">
-                                        <input type="checkbox" class="custom-control-input bg-primary" id="customCheck-1" checked="">
-                                        <label class="custom-control-label" for="customCheck-1"> حتى الان</label>
-                                    </div>
+
 
                                 </div>
 
@@ -668,6 +669,12 @@
                                     <label for="text">  تاريخ السداد  </label>
                                     <input type="text" class="datepicker">
                                 </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary" >
+                                        submit
+                                    </button>
+                                </div>
+
                             </div>
 
 
@@ -804,6 +811,12 @@
             })
         })
 
+    </script>
+    <script>
+        $('#chk').change(function () {
+            if ($(this).is(':checked'))
+                $('#inp1').prop('disabled', 'disabled')
+        })
     </script>
 
 
