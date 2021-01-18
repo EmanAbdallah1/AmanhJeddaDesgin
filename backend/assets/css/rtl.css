@@ -482,3 +482,33 @@ input {
 label{
     display:block
 }
+.input-group > .input-group-append > .btn, .input-group > .input-group-append > .input-group-text, .input-group > .input-group-prepend:first-child > .btn:not(:first-child), .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child), .input-group > .input-group-prepend:not(:first-child) > .btn, .input-group > .input-group-prepend:not(:first-child) > .input-group-text {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-group > .input-group-append > .btn, .input-group > .input-group-append > .input-group-text, .input-group > .input-group-prepend:first-child > .btn:not(:last-child), .input-group > .input-group-prepend:last-child > .input-group-text:not(:last-child), .input-group > .input-group-prepend:not(:last-child) > .btn, .input-group > .input-group-prepend:not(:last-child) > .input-group-text {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.card-block {
+    display: block;
+    margin: auto;
+    margin-top: auto;
+    margin-top: 15px;
+margin-bottom:10px
+}
+.ms-container {
+    background: transparent url('../img/switch.png') no-repeat 50% 50%;
+    width: 370px;
+    display: block;
+    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+    .ms-container .ms-selectable, .ms-container .ms-selection {
+        float: right !important;
+        width: 45%;
+        margin-left: 5px !important;
+    }

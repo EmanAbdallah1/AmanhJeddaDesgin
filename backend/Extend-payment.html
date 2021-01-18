@@ -590,7 +590,7 @@
 
                             <div class="card-header d-flex justify-content-between">
                                 <div class="header-title">
-                                    <h4 class="card-title">تسديد مخالفه </h4>
+                                    <h4 class="card-title">تمديد السداد </h4>
                                 </div>
                             </div>
                         </div>
@@ -606,7 +606,7 @@
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="text">
-                                        اختر  العقد
+                                        البحث عن مخالفه
                                     </label>
                                     <select class="js-example-basic-single templatingSelect2 select2" name="state" style="padding:10px 20px !important; margin-top:10px">
                                         <option value="AL">Alabama</option>
@@ -616,66 +616,11 @@
 
                                 </div>
                                 <div class="form-group">
-                                    <label for="text">
-                                        اختر  المعسكر
-                                    </label>
-                                    <select class="js-example-basic-single templatingSelect2 select2" name="state" style="padding:10px 20px !important; margin-top:10px">
-                                        <option value="AL">Alabama</option>
-
-                                        <option value="WY">Wyoming</option>
-                                    </select>
-
-                                </div>
-                                <div class="form-group">
-                                    <label for="text">
-                                        اختر الفتره
-                                    </label>
-                                     <div class="custom-control custom-checkbox custom-checkbox-color-check custom-control-inline">
-                                        <input type="checkbox" class="custom-control-input bg-primary" id="customCheck-1" checked="">
-                                        <label class="custom-control-label" for="customCheck-1"> حتى الان</label>
-                                    </div>
-                                    <select class="js-example-basic-single templatingSelect2 select2" name="state" >
-                                        <option value="AL">Alabama</option>
-
-                                        <option value="WY">Wyoming</option>
-                                    </select>
-                                   
-
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label for="text">
-                                        ارفاق الصور
-                                    </label>
-                                    <label for="upload" class="custom-file-upload">
-                                        <i class="fas fa-cloud"></i> Upload file
-                                    </label>
-                                    <input class="upload" name='upload_cont_img' type="file" style="display:none;">
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label for="text">
-                                        نص السداد
-                                    </label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="text">  تاريخ السداد  </label>
+                                    <label for="text"> تمديد السداد الى يوم   </label>
                                     <input type="text" class="datepicker">
                                 </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-primary" >
-                                        submit
-                                    </button>
-                                </div>
-
                             </div>
+
 
 
                         </div>
@@ -758,25 +703,7 @@
     <script src="assets/js/app.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/all.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.plusminus').on('click', '.button-plus', function () {
-                var $input = $(this).siblings('input');
-                $input.val(parseInt($input.val()) + 1);
-            })
-            $('.plusminus').on('click', '.button-minus', function () {
-                var $input = $(this).siblings('input');
-                var count = parseInt($input.val());
-                if (count > 0) {
-                    var newval = $input.val(parseInt($input.val()) - 1)
-                } else {
-                    newval = 0
-                }
 
-            })
-        }
-        );
-    </script>
     <script>
         $('.datepicker').pickadate({
             format: 'mm/dd/yyyy',
@@ -794,23 +721,6 @@
             labelMonthSelect: 'اختر شهر',
             labelYearSelect: 'اختر عام',
         });
-    </script>
-    <script>
-        $(document).ready(function () {
-            $(".custom-file-upload").on('click',  function () {
-                $(this).siblings(".upload").click();
-            })
-            $(".upload").on('change', function () {
-                var numfirst = 0;
-                if ($(this).val().indexOf('/') > 0) {
-                    numfirst = $(this).val().lastIndexOf('/');
-                } else if ($(this).val().indexOf('\\') > 0) {
-                    numfirst = $(this).val().lastIndexOf('\\');
-                }
-                $(this).siblings(".custom-file-upload").html($(this).val().slice(numfirst + 1));
-            })
-        })
-
     </script>
 
 
