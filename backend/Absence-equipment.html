@@ -26,10 +26,20 @@
 
         <link rel="stylesheet" href="assets/css/rtl.css" />
         <style>
-            .select2-container {
-    margin-right: -69px;
-        }
-     
+          
+            .form-control {
+                width: 100% !important;
+            }
+            .templatingSelect2.select2 {
+                width: 100% !important;
+            }
+            .row{
+                margin-top:10px
+            }
+            .tab-pane .templatingSelect2.select2 {
+                width: 100% !important;
+            }
+
         </style>
 
     </head>
@@ -200,9 +210,9 @@
                                                                             <i class="las la-user-cog"></i><span>ربط بنود المعاينه بنوع العقد</span>
                                                                         </a>
                                                                     </li>
-                                                                       <li class=" ">
+                                                                    <li class=" ">
                                                                         <a href="company-guide.html">
-                                                                            <i class="las la-user-cog"></i><span>غياب المعدات</span>
+                                                                            <i class="las la-user-cog"></i><span> غياب المعدات</span>
                                                                         </a>
                                                                     </li>
                                                                 </ul>
@@ -627,7 +637,7 @@
                             <div class="card">
                                 <div class="card-header d-flex justify-content-between">
                                     <div class="header-title">
-                                        <h4 class="card-title" style="margin-top:6px !important">غياب  المعدات  </h4>
+                                        <h4 class="card-title" style="margin-top:6px !important">غياب المعدات</h4>
                                     </div>
 
                                 </div>
@@ -637,57 +647,170 @@
 
                         <div class="col-sm-12 col-lg-12">
                             <div class="card" style="padding: 19px;">
+
                                 <div class="row">
+                                    <div class="col-sm-12 col-lg-2">
+                                        <h4 for="text" style="text-align:right"> اسم الفتره</h4>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-4">
+                                        <input type="text" class="form-control" id="time">
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-sm-12 col-lg-2">
+                                        <h6 for="text">  تاريخ التسجيل</h6>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-4">
+                                        <input type="text" class="datepicker">
+                                    </div>
+                                </div>
+                                <div class="row">
+
                                     <div class="col-sm-12 col-lg-2">
                                         <h4 class="card-title" style=" margin-top: 12px;">  اختر المعده  </h4>
                                     </div>
                                     <div class="col-sm-12 col-lg-4">
-                                        <select class="templatingSelect2 select2" name="state" style="padding:10px 20px !important">
+                                        <select class="templatingSelect2 select2" name="state" >
                                             <option value="AL">اختر </option>
                                             <option value="AL">Alabama</option>
                                             <option value="WY">Wyoming</option>
                                         </select>
                                     </div>
                                 </div>
-
-                                <div class="row">
-                                    <div class="col-sm-12 col-lg-2">
-                                        <h4 for="text" style="text-align:right"> اختر اليوم من </h4>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-4">
-                                      <input type="text" class="datepicker empty">
-                                      </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12 col-lg-2">
-                                        <h4 for="text" style="text-align:right"> اختر اليوم الى  </h4>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-4">
-                                      <input type="text" class="datepicker empty">
-                                      </div>
-                                </div>
-                          <div class="row">
-                                    <div class="col-sm-12 col-lg-2">
-                                        <h4 for="text" style="text-align:right">   ملاحظه </h4>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-4">
-                                       <textarea class="form-control" aria-label="With textarea"></textarea>
-                                      </div>
-                                </div>
-                                 <div class="row">
-                                    <div class="col-sm-12 col-lg-2">
-                                        <h4 for="text" style="text-align:right">   سبب الغياب  </h4>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-4">
-                                       <textarea class="form-control" aria-label="With textarea"></textarea>
-                                      </div>
-                                </div>
-                                </div>
-                            
-                               
-
-
+                            </div>
                         </div>
+                        <div class="col-sm-12 col-lg-12">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="header-title">
+                                        <h4 class="card-title" style="margin-top:6px !important">عمليات فتح فتره او اغلاق فتره  </h4>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-12 col-lg-12">
+                            <div class="card">
+
+                                <div class="card-body">
+                                    <ul class="nav nav-tabs" id="myTab-1" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">العربية</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">English</a>
+                                        </li>
+
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent-2">
+                                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                                            <div class="row">
+
+                                                <div class="col-sm-12 col-lg-2">
+                                                    <h4 class="card-title" style=" margin-top: 12px;">  اختر الفتره  </h4>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-4">
+                                                    <select class="templatingSelect2 select2" name="state" style="padding:10px 20px !important">
+                                                        <option value="AL">اختر </option>
+                                                        <option value="AL">Alabama</option>
+                                                        <option value="WY">Wyoming</option>
+                                                    </select>
+                                                </div>
+                                          
+
+                                          
+                                                <div class="col-sm-12 col-lg-2">
+                                                    <h4 class="card-title" style=" margin-top: 12px;">اختر  العقد  </h4>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-4">
+                                                    <select class="templatingSelect2 select2" name="state" style="padding:10px 20px !important">
+                                                        <option value="AL">اختر </option>
+                                                        <option value="AL">Alabama</option>
+                                                        <option value="WY">Wyoming</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row" style=" margin-bottom: 50px; margin-top: 42px;">
+                                                <div class="col-sm-12 col-lg-5">
+                                                    <h4 for="text"> مده الفتح باليوم او مفتوح حتى يتم اغلاقه</h4>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-4">
+                                                    <input type="text" class="form-control" id="time" style=" position: absolute; left: 128px; bottom: -12px;">
+                                                </div>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
+                                                <label class="custom-control-label" for="customCheck6">فتح الاعتراض</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
+                                                <label class="custom-control-label" for="customCheck6">فتح اعتماد غياب العمال</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
+                                                <label class="custom-control-label" for="customCheck6">فتح اعتماد المعدات البيانيه</label>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                                            <div class="row">
+
+                                                <div class="col-sm-12 col-lg-2">
+                                                    <h4 class="card-title" style=" margin-top: 12px;">  اختر الفتره  </h4>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-4">
+                                                    <select class="templatingSelect2 select2" name="state" style=" width:100%">
+                                                        <option value="AL">اختر </option>
+                                                        <option value="AL">Alabama</option>
+                                                        <option value="WY">Wyoming</option>
+                                                    </select>
+                                                </div>
+                                         
+
+                                            
+                                                <div class="col-sm-12 col-lg-2">
+                                                    <h4 class="card-title" style=" margin-top: 12px;">اختر  العقد  </h4>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-4">
+                                                    <select class="templatingSelect2 select2" name="state" style="width:100%">
+                                                        <option value="AL">اختر </option>
+                                                        <option value="AL">Alabama</option>
+                                                        <option value="WY">Wyoming</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row" style=" margin-bottom: 50px; margin-top: 42px;">
+                                                <div class="col-sm-12 col-lg-5">
+                                                    <h4 for="text"> مده الفتح باليوم او مفتوح حتى يتم اغلاقه</h4>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-4">
+                                                    <input type="text" class="form-control" id="time" style=" position: absolute; left: 128px; bottom: -12px;">
+                                                </div>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
+                                                <label class="custom-control-label" for="customCheck6">فتح الاعتراض</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
+                                                <label class="custom-control-label" for="customCheck6">فتح اعتماد غياب العمال</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
+                                                <label class="custom-control-label" for="customCheck6">فتح اعتماد المعدات البيانيه</label>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     </div>
                 </div>
@@ -748,22 +871,5 @@
         <script src="assets/js/app.js"></script>
         <script src="assets/js/main.js"></script>
     </body>
-    <script>
-    (".datepicker").pickadate({
-                    format: 'mm/dd/yyyy',
-                    monthsFull: ['يناير', 'فبراير', 'مارس', 'ابريل', 'مايو', 'يونية', 'يوليو', 'اغسطس', 'سبتمبر', 'اكتوبر', 'نوفمبر', 'ديسمبر'],
-                    weekdaysShort: ['الأحد', 'الأثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
 
-                    // Buttons
-                    today: 'اليوم',
-                    clear: 'مسح',
-                    close: 'غلق',
-
-                    // Accessibility labels
-                    labelMonthNext: 'الشهر التالي',
-                    labelMonthPrev: 'الشهر السابق',
-                    labelMonthSelect: 'اختر شهر',
-                    labelYearSelect: 'اختر عام',
-                });
-    </script>
 </html>
