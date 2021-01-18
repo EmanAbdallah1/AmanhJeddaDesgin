@@ -42,10 +42,8 @@
        .col-lg-2{
         margin-top:10px
     }
-        .datepicker {
-         
-            padding: 2px;
-        }
+      
+      
     </style>
     </head>
 
@@ -703,7 +701,7 @@
                             <div class="card">
                                 <div class="card-header d-flex justify-content-between">
                                     <div class="header-title">
-                                        <h4 class="card-title" style="margin-top:6px !important">غياب العماله  </h4>
+                                        <h4 class="card-title" style="margin-top:6px !important">تجديد المستندات  </h4>
                                     </div>
 
                                 </div>
@@ -713,59 +711,64 @@
                             <div class="card" style="padding:26px">
                                 <form>
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-4">
                                             <div class="form-group">
-                                                <label for="text">
-                                                    اخر العقد
+                                                <label for="text" style="float:right">
+                                                    اخر العامل
                                                 </label>
                                                 <br />
-                                                <select class="js-example-basic-single templatingSelect2" name="state" style="padding:10px 20px !important; margin-top:10px">
+                                                <select class="js-example-basic-single templatingSelect2 select2" name="state" >
                                                     <option value="AL">Alabama</option>
 
                                                     <option value="WY">Wyoming</option>
                                                 </select>
-
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="text">
-                                                    اختر المسمى الوظيفى
-                                                </label>
-                                                <br />
-                                                <select class="js-example-basic-single templatingSelect2" name="state" style="padding:10px 20px !important; margin-top:10px">
-                                                    <option value="AL">Alabama</option>
-
-                                                    <option value="WY">Wyoming</option>
-                                                </select>
-
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="text">
-                                                    اختر كود العامل
-                                                </label>
-                                                <br />
-                                                <select class="js-example-basic-single templatingSelect2" name="state" style="padding:10px 20px !important; margin-top:10px">
-                                                    <option value="AL">Alabama</option>
-
-                                                    <option value="WY">Wyoming</option>
-                                                </select>
-
-                                            </div>
-
-
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label for="text">التاريخ من  </label>
-                                                <br />
-                                                <input type="text" class="datepicker">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="text">التايخ  الى   </label>
-                                                <br />
-                                                <input type="text" class="datepicker">
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-sm-12">
+                                        <div id="table" class="table-editable">
+
+                                            <table class="table table-bordered table-responsive-md table-striped text-center main-files">
+                                                <thead>
+                                                    <tr>
+                                                        <th>اسم المستند</th>
+                                                        <th>تاريخ الانتهاء الحالى</th>
+                                                        <th> تاريخ الانتهاء الجديد</th>
+                                                        <th>   مرفق</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td contenteditable="true">
+                                                            <input type="text" />
+                                                        </td>
+                                                        <td contenteditable="true"> <input type="text" class="datepicker"></td>
+                                                        <td contenteditable="true"> <input type="text" class="datepicker"></td>
+                                                        <td>
+                                                            <label for="file-upload" class="custom-file-upload" >
+                                                                <i class="fas fa-cloud"></i> Upload file
+                                                            </label>
+                                                            <input class="file-upload" name='upload_cont_img' type="file" style="display:none;">
+                                                        </td>
+
+                                                        <td>
+
+                                                            <button class="btn btn-sm bg-primary btn-addnew" type="button">
+                                                                <i class="fas fa-plus"></i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
                                 </form>
                             </div>
 
@@ -836,22 +839,86 @@
         <script src="assets/js/main.js"></script>
         <script src="assets/js/all.js"></script>
         <script>
-            $(".datepicker").pickadate({
-                format: 'mm/dd/yyyy',
-                monthsFull: ['يناير', 'فبراير', 'مارس', 'ابريل', 'مايو', 'يونية', 'يوليو', 'اغسطس', 'سبتمبر', 'اكتوبر', 'نوفمبر', 'ديسمبر'],
-                weekdaysShort: ['الأحد', 'الأثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
+            $(document).ready(function () {
+                $(".main-files").on("click", ".btn-addnew", function () {
+                    $(this).closest("tbody").append($(this).closest("tr").clone());
+                   
+                    $(this).closest("tbody").children("tr:last-child").children("td").children(".datepicker").removeClass("picker__input").removeClass("picker__input--active");
+                    $(this).closest("tbody").children("tr:last-child").children("td").children(".datepicker").siblings(".picker").remove();
+                    $(this).closest("tbody").children("tr:last-child").children("td").children(".datepicker").removeAttr("id").removeAttr("aria-owns");
 
-                // Buttons
-                today: 'اليوم',
-                clear: 'مسح',
-                close: 'غلق',
+                    $(this).closest("tbody").children("tr:last-child").children("td").find("input").val("");
+                    $(this).closest("tbody").children("tr:last-child").children("td:eq(5)").html(`                                                        <label for="file-upload" class="custom-file-upload">
+                                                                                        <i class="fas fa-cloud"></i> Upload file
+                                                                                    </label>
+                                                                                    <input id="file-upload" name='upload_cont_img' type="file" style="display:none;">
+`);
+                    if ($(this).closest("tbody").children("tr:last-child").children("td:last-child").children(".btn-delnew").length == 0) {
+                        $(this).closest("tbody").children("tr:last-child").children("td:last-child").append(`<button type="button"
+                                                                                            class="btn bg-danger-light btn-rounded btn-sm my-0 btn-delnew">
+                                                                                        <i class="fas fa-trash-alt"></i>
+                                                                                    </button>`);
+                    }
+                    $(this).closest("tbody").children("tr:last-child").find(".datepicker").pickadate({
+                        format: 'mm/dd/yyyy',
+                        monthsFull: ['يناير', 'فبراير', 'مارس', 'ابريل', 'مايو', 'يونية', 'يوليو', 'اغسطس', 'سبتمبر', 'اكتوبر', 'نوفمبر', 'ديسمبر'],
+                        weekdaysShort: ['الأحد', 'الأثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
 
-                // Accessibility labels
-                labelMonthNext: 'الشهر التالي',
-                labelMonthPrev: 'الشهر السابق',
-                labelMonthSelect: 'اختر شهر',
-                labelYearSelect: 'اختر عام',
+                        // Buttons
+                        today: 'اليوم',
+                        clear: 'مسح',
+                        close: 'غلق',
+
+                        // Accessibility labels
+                        labelMonthNext: 'الشهر التالي',
+                        labelMonthPrev: 'الشهر السابق',
+                        labelMonthSelect: 'اختر شهر',
+                        labelYearSelect: 'اختر عام',
+                    });
+
+                })
+                $(".main-files").on("click", ".btn-delnew", function () {
+                    $(this).closest("tr").remove();
+                })
+                if ($(".datepicker").length !== 0) {
+
+                    $('.datepicker').pickadate({
+                        format: 'mm/dd/yyyy',
+                        monthsFull: ['يناير', 'فبراير', 'مارس', 'ابريل', 'مايو', 'يونية', 'يوليو', 'اغسطس', 'سبتمبر', 'اكتوبر', 'نوفمبر', 'ديسمبر'],
+                        weekdaysShort: ['الأحد', 'الأثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
+
+                        // Buttons
+                        today: 'اليوم',
+                        clear: 'مسح',
+                        close: 'غلق',
+
+                        // Accessibility labels
+                        labelMonthNext: 'الشهر التالي',
+                        labelMonthPrev: 'الشهر السابق',
+                        labelMonthSelect: 'اختر شهر',
+                        labelYearSelect: 'اختر عام',
+                    });
+                };
+
             });
+
+        </script>
+        <script>
+            $(document).ready(function () {
+                $(".main-files").on('click', ".custom-file-upload", function () {
+                    $(this).siblings(".file-upload").click();
+                })
+                $(".main-files").on('change', ".file-upload", function () {
+                    var numfirst = 0;
+                    if ($(this).val().indexOf('/') > 0) {
+                        numfirst = $(this).val().lastIndexOf('/');
+                    } else if ($(this).val().indexOf('\\') > 0) {
+                        numfirst = $(this).val().lastIndexOf('\\');
+                    }
+                    $(this).siblings(".custom-file-upload").html($(this).val().slice(numfirst + 1));
+                })
+            })
+
         </script>
     </body>
 
