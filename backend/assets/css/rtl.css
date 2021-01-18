@@ -475,3 +475,12 @@ input{
         border:1px solid #8080806b;
         padding:3px;
 }
+label{
+    text-align:right;
+}
+.datepicker {
+    padding: 2px;
+}
+.custom-file-upload{
+    width:100%
+}
