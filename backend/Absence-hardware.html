@@ -31,110 +31,9 @@
     <link rel="stylesheet" href="/resources/demos/style.css">
     <link href="assets/vendor/select2/select2.css" rel="stylesheet" />
     <style>
-        .form-control {
-            width: 56% !important;
+        .datepicker{
+            padding:2px!important
         }
-
-        .templatingSelect2 {
-            border-color: #8080803d !important;
-        }
-
-        .bg-danger-light {
-            color: #b01417 !important;
-            background-color: transparent !important;
-            font-size: 20px;
-        }
-
-            .bg-danger-light:not(:disabled):not(.disabled) {
-                cursor: pointer;
-                background-color: transparent !important;
-            }
-
-        .bg-primary {
-            color: #05bbc9 !important;
-            background-color: transparent !important;
-            font-size: 20px;
-            margin-left: -43px;
-        }
-
-            .bg-primary:not(:disabled):not(.disabled) {
-                color: #05bbc9 !important;
-                cursor: pointer;
-                background-color: transparent !important;
-                font-size: 20px;
-                margin-left: auto;
-            }
-
-        #collapseOne {
-            padding: 30px
-        }
-
-        input {
-            border: 1px solid #8080803b;
-            padding: 7px
-        }
-
-        .custom-file-upload {
-            border: 1px solid #ccc;
-            display: inline-block;
-            padding: 6px 12px;
-            cursor: pointer;
-            background: #05bbc9;
-            color: white;
-        }
-
-        ::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 5px #8080803b;
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #8080803b;
-            border-radius: 10px;
-        }
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-        input[type=number] {
-            -moz-appearance: textfield;
-        }
-        .button-minus {
-            top: 0;
-            z-index: 9;
-            bottom: 0;
-            border: 1px;
-        }
-        .button-plus {
-            position: absolute;
-            bottom: 0;
-            z-index: 9;
-            right: 0;
-            top: 0;
-            border: 1px;
-        }
-        .accordion > .card > .card-header{
-            position:relative;
-        }
-        .accordion h5 .fa-plus {
-            position: absolute;
-            left: 0;
-            margin-left:12px
-        }
-        .accordion h5 .fa-minus {
-            position: absolute;
-            left: 0;
-            margin-left:12px
-        }
-        .accordion span {
-            font-weight: 400;
-            color: #05bbc9;
-            text-decoration: none;
-        }
-            .accordion span:hover {
-                color: #03767e;
-            }
     </style>
 </head>
 
@@ -672,24 +571,24 @@
 
 
 
-                <div class="card">
+                <div class="card" style="padding:25px">
                     <form>
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="text">اسم الفتره  </label>
-                                    <input type="text" class="form-control" id="email1">
+                                    <input type="text" class="form-control" id="">
                                 </div>
                                 <div class="form-group">
                                     <label for="text">تاريخ التسجيل  </label>
-                                    <input type="text" class="form-control" id="email1">
+                                    <input type="text" class="datepicker" id="">
                                 </div>
                                 <div class="form-group">
                                     <label for="text">
                                         اختر  المعده
                                     </label>
                                     <br />
-                                    <select class="js-example-basic-single templatingSelect2" name="state" style="padding:10px 20px !important; margin-top:10px">
+                                    <select class="js-example-basic-single templatingSelect2 select2" name="state" style="padding:10px 20px !important; margin-top:10px">
                                         <option value="AL">Alabama</option>
 
                                         <option value="WY">Wyoming</option>
@@ -719,7 +618,7 @@
 
 
 
-                <div class="card">
+                <div class="card" style="padding:25px">
                     <form>
                         <div class="row">
                             <div class="col-lg-6">
@@ -729,39 +628,15 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="text">تاريخ التسجيل  </label>
-                                    <input type="text" class="form-control" id="email1">
+                                    <input type="text" class="datepicker">
                                 </div>
-                                <div class="form-group">
-                                    <label for="text">
-                                        اختر  الفتره
-                                    </label>
-                                    <br />
-                                    <select class="js-example-basic-single templatingSelect2" name="state" style="padding:10px 20px !important; margin-top:10px">
-                                        <option value="AL">Alabama</option>
 
-                                        <option value="WY">Wyoming</option>
-                                    </select>
-
-                                </div>
-                                <div class="form-group">
-                                    <label for="text">
-                                        اختر  العقد
-                                    </label>
-                                    <br />
-                                    <select class="js-example-basic-single templatingSelect2" name="state" style="padding:10px 20px !important; margin-top:10px">
-                                        <option value="AL">Alabama</option>
-
-                                        <option value="WY">Wyoming</option>
-                                    </select>
-
-                                </div>
                                 <div class="form-group">
                                     <label for="text">مده الفتح باليوم  </label>
-                                    <input type="text" class="form-control" id="">
-                                    <div class="custom-control custom-checkbox custom-checkbox-color-check custom-control-inline">
-                                        <input type="checkbox" class="custom-control-input bg-primary" id="customCheck-1" checked="">
-                                        <label class="custom-control-label" for="customCheck-1"> مفتوح حتى يتم اغلاقه</label>
-                                    </div>
+                                    <input type="text" class="form-control" id="yourText">
+                                    <!--<input type="checkbox" class="custom-control-input bg-primary" id="yourBox">-->
+                                    <input type="checkbox" id="yourBox" class=" bg-primary checkbox" style="position:absolute;margin-top:10px;z-index:9;left:20%" />
+                                    <p style="position:relative ; margin-top:6px">مفتوح حتى يتم اغلاقه</p>
                                 </div>
                                 <div class="form-group">
                                     <div class="custom-control custom-checkbox custom-control-inline">
@@ -777,6 +652,31 @@
                                         <label class="custom-control-label" for="customCheck6">فتح اعتماد المعدات البيانيه</label>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="text">
+                                        اختر  العقد
+                                    </label>
+                                    <select class="js-example-basic-single templatingSelect2 select2" name="state">
+                                        <option value="AL">Alabama</option>
+
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="text">
+                                        اختر  الفتره
+                                    </label>
+                                    <select class="js-example-basic-single templatingSelect2 select2" name="state">
+                                        <option value="AL">Alabama</option>
+
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+
+                                </div>
+
                             </div>
                         </div>
                     </form>
@@ -855,242 +755,28 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/all.js"></script>
     <script>
-        $(document).ready(function () {
-            $(".btn-accordion").on("click", function () {
-                $(this).children("h5").children(".icon").toggleClass("fa-minus").toggleClass("fa-plus");
-                $(this).siblings(".accordion-body").fadeToggle(100);
-            })
+        $('.datepicker').pickadate({
+            format: 'mm/dd/yyyy',
+            monthsFull: ['يناير', 'فبراير', 'مارس', 'ابريل', 'مايو', 'يونية', 'يوليو', 'اغسطس', 'سبتمبر', 'اكتوبر', 'نوفمبر', 'ديسمبر'],
+            weekdaysShort: ['الأحد', 'الأثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
+
+            // Buttons
+            today: 'اليوم',
+            clear: 'مسح',
+            close: 'غلق',
+
+            // Accessibility labels
+            labelMonthNext: 'الشهر التالي',
+            labelMonthPrev: 'الشهر السابق',
+            labelMonthSelect: 'اختر شهر',
+            labelYearSelect: 'اختر عام',
         });
-        //$('.file-upload').change(function () {
-        //    var i = $(this).prev('label').clone();
-        //    var file = $('.file-upload')[0].files[0].name;
-        //    $(this).prev('label').text(file);
-        //});
-        //$('.upload').change(function () {
-        //    var i = $(this).prev('label').clone();
-        //    var file = $('.upload')[0].files[0].name;
-        //    $(this).prev('label').text(file);
-        //});
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $(".main-files").on('click', ".custom-file-upload", function () {
-                $(this).siblings(".file-upload").click();
-            })
-            $(".main-files").on('change', ".file-upload", function () {
-                var numfirst = 0;
-                if ($(this).val().indexOf('/') > 0) {
-                    numfirst = $(this).val().lastIndexOf('/');
-                } else if ($(this).val().indexOf('\\') > 0) {
-                    numfirst = $(this).val().lastIndexOf('\\');
-                }
-                $(this).siblings(".custom-file-upload").html($(this).val().slice(numfirst + 1));
-            })
-        })
-
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $(".main-data").on('click', ".custom-file-upload", function () {
-                $(this).siblings(".upload").click();
-            })
-            $(".main-data").on('change', ".upload", function () {
-                var numfirst = 0;
-                if ($(this).val().indexOf('/') > 0) {
-                    numfirst = $(this).val().lastIndexOf('/');
-                } else if ($(this).val().indexOf('\\') > 0) {
-                    numfirst = $(this).val().lastIndexOf('\\');
-                }
-                $(this).siblings(".custom-file-upload").html($(this).val().slice(numfirst + 1));
-            })
-        })
-
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $('.plusminus').on('click', '.button-plus', function () {
-                var $input = $(this).siblings('input');
-                $input.val(parseInt($input.val()) + 1);
-            })
-            $('.plusminus').on('click', '.button-minus', function () {
-                var $input = $(this).siblings('input');
-                var count = parseInt($input.val());
-                if (count > 0) {
-                    var newval = $input.val(parseInt($input.val()) - 1)
-                } else {
-                    newval = 0
-                }
-
-            })
-        }
-        );
     </script>
     <script>
-        $(document).ready(function () {
-            $(".main-files").on("click", ".btn-addnew", function () {
-                $(this).closest("tbody").append($(this).closest("tr").clone());
-                $(this).closest("tbody").children("tr").children("td").children(".choose-document").siblings(".select2-container").remove();
-                $(this).closest("tbody").children("tr").children("td").children(".choose-document").removeClass("select2-hidden-accessible");
-                $(this).closest("tbody").children("tr:last-child").children("td").children(".datepicker").removeClass("picker__input").removeClass("picker__input--active");
-                $(this).closest("tbody").children("tr:last-child").children("td").children(".datepicker").siblings(".picker").remove();
-                $(this).closest("tbody").children("tr:last-child").children("td").children(".datepicker").removeAttr("id").removeAttr("aria-owns");
-                $(this).closest("tbody").children("tr:last-child").children("td").children(".choose-document").val($(this).closest("tbody").children("tr:last-child").children("td").children(".choose-document option:first-child").val());
-
-                $(this).closest("tbody").children("tr").children("td").children(".choose-document").select2();
-                $(this).closest("tbody").children("tr:last-child").children("td").find(".empty").val("");
-                $(this).closest("tbody").children("tr:last-child").children("td:eq(5)").html(`                                                        <label for="file-upload" class="custom-file-upload">
-                                                                                <i class="fas fa-cloud"></i> Upload file
-                                                                            </label>
-                                                                            <input id="file-upload" name='upload_cont_img' type="file" style="display:none;">
-`);
-                if ($(this).closest("tbody").children("tr:last-child").children("td:last-child").children(".btn-delnew").length == 0) {
-                    $(this).closest("tbody").children("tr:last-child").children("td:last-child").append(`<button type="button"
-                                                                                    class="btn bg-danger-light btn-rounded btn-sm my-0 btn-delnew">
-                                                                                <i class="fas fa-trash-alt"></i>
-                                                                            </button>`);
-                }
-                $(this).closest("tbody").children("tr:last-child").find(".datepicker").pickadate({
-                    format: 'mm/dd/yyyy',
-                    monthsFull: ['يناير', 'فبراير', 'مارس', 'ابريل', 'مايو', 'يونية', 'يوليو', 'اغسطس', 'سبتمبر', 'اكتوبر', 'نوفمبر', 'ديسمبر'],
-                    weekdaysShort: ['الأحد', 'الأثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
-
-                    // Buttons
-                    today: 'اليوم',
-                    clear: 'مسح',
-                    close: 'غلق',
-
-                    // Accessibility labels
-                    labelMonthNext: 'الشهر التالي',
-                    labelMonthPrev: 'الشهر السابق',
-                    labelMonthSelect: 'اختر شهر',
-                    labelYearSelect: 'اختر عام',
-                });
-
-            })
-            $(".main-files").on("click", ".btn-delnew", function () {
-                $(this).closest("tr").remove();
-            })
-            if ($(".datepicker").length !== 0) {
-
-                $('.datepicker').pickadate({
-                    format: 'mm/dd/yyyy',
-                    monthsFull: ['يناير', 'فبراير', 'مارس', 'ابريل', 'مايو', 'يونية', 'يوليو', 'اغسطس', 'سبتمبر', 'اكتوبر', 'نوفمبر', 'ديسمبر'],
-                    weekdaysShort: ['الأحد', 'الأثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
-
-                    // Buttons
-                    today: 'اليوم',
-                    clear: 'مسح',
-                    close: 'غلق',
-
-                    // Accessibility labels
-                    labelMonthNext: 'الشهر التالي',
-                    labelMonthPrev: 'الشهر السابق',
-                    labelMonthSelect: 'اختر شهر',
-                    labelYearSelect: 'اختر عام',
-                });
-            };
-
-        });
-
+        document.getElementById('yourBox').onchange = function () {
+            document.getElementById('yourText').disabled = this.checked;
+        };
     </script>
-    <script>
-        $(document).ready(function () {
-            $(".main-data").on("click", ".btn-addnew", function () {
-                $(this).closest("tbody").append($(this).closest("tr").clone());
-
-
-
-                $(this).closest("tbody").children("tr:last-child").children("td").children(".datepicker").removeClass("picker__input").removeClass("picker__input--active");
-                $(this).closest("tbody").children("tr:last-child").children("td").children(".datepicker").siblings(".picker").remove();
-                $(this).closest("tbody").children("tr:last-child").children("td").children(".datepicker").removeAttr("id").removeAttr("aria-owns");
-                $(this).closest("tbody").children("tr:last-child").children("td").children(".choose-document").val($(this).closest("tbody").children("tr:last-child").children("td").children(".choose-document option:first-child").val());
-
-                $(this).closest("tbody").children("tr:last-child").children("td").find(".empty").val("");
-
-                $(this).closest("tbody").children("tr:last-child").children("td:eq(5)").html(`                                                        <label for="file-upload" class="custom-file-upload">
-                                                                                <i class="fas fa-cloud"></i> Upload file
-                                                                            </label>
-                                                                            <input id="file-upload" name='upload_cont_img' type="file" style="display:none;">`);
-                if ($(this).closest("tbody").children("tr:last-child").children("td:last-child").children(".btn-delnew").length == 0) {
-                    $(this).closest("tbody").children("tr:last-child").children("td:last-child").append(`<button type="button"
-                                                                                    class="btn bg-danger-light btn-rounded btn-sm my-0 btn-delnew">
-                                                                                <i class="fas fa-trash-alt"></i>
-                                                                            </button>`);
-                }
-                $(this).closest("tbody").children("tr:last-child").find(".datepicker").pickadate({
-                    format: 'mm/dd/yyyy',
-                    monthsFull: ['يناير', 'فبراير', 'مارس', 'ابريل', 'مايو', 'يونية', 'يوليو', 'اغسطس', 'سبتمبر', 'اكتوبر', 'نوفمبر', 'ديسمبر'],
-                    weekdaysShort: ['الأحد', 'الأثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
-
-                    // Buttons
-                    today: 'اليوم',
-                    clear: 'مسح',
-                    close: 'غلق',
-
-                    // Accessibility labels
-                    labelMonthNext: 'الشهر التالي',
-                    labelMonthPrev: 'الشهر السابق',
-                    labelMonthSelect: 'اختر شهر',
-                    labelYearSelect: 'اختر عام',
-                });
-
-            })
-            $(".main-data").on("click", ".btn-delnew", function () {
-                $(this).closest("tr").remove();
-            })
-            if ($(".datepicker").length !== 0) {
-
-                $('.datepicker').pickadate({
-                    format: 'mm/dd/yyyy',
-                    monthsFull: ['يناير', 'فبراير', 'مارس', 'ابريل', 'مايو', 'يونية', 'يوليو', 'اغسطس', 'سبتمبر', 'اكتوبر', 'نوفمبر', 'ديسمبر'],
-                    weekdaysShort: ['الأحد', 'الأثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
-
-                    // Buttons
-                    today: 'اليوم',
-                    clear: 'مسح',
-                    close: 'غلق',
-
-                    // Accessibility labels
-                    labelMonthNext: 'الشهر التالي',
-                    labelMonthPrev: 'الشهر السابق',
-                    labelMonthSelect: 'اختر شهر',
-                    labelYearSelect: 'اختر عام',
-                });
-            };
-
-        });
-
-    </script>
-    <script>
-        $(document).ready(function () {
-            $(".main-contact").on("click", ".btn-addnew", function () {
-                $(this).closest("tbody").append($(this).closest("tr").clone());
-
-
-                $(this).closest("tbody").children("tr:last-child").children("td").children(".choose-document").val($(this).closest("tbody").children("tr:last-child").children("td").children(".choose-document option:first-child").val());
-
-                $(this).closest("tbody").children("tr").children("td").children(".choose-document").select2();
-                $(this).closest("tbody").children("tr:last-child").children("td").find("input").val("");
-
-                if ($(this).closest("tbody").children("tr:last-child").children("td:last-child").children(".btn-delnew").length == 0) {
-                    $(this).closest("tbody").children("tr:last-child").children("td:last-child").append(`<button type="button"
-                                                                                        class="btn bg-danger-light btn-rounded btn-sm my-0 btn-delnew">
-                                                                                    <i class="fas fa-trash-alt"></i>
-                                                                                </button>`);
-                }
-            })
-            $(".main-contact").on("click", ".btn-delnew", function () {
-                $(this).closest("tr").remove();
-            })
-
-
-        });
-
-    </script>
-
 
 </body>
 
