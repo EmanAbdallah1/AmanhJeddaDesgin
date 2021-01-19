@@ -8,3 +8,6 @@
 .dataTables_wrapper .dataTables_length label, .dataTables_wrapper .dataTables_length select {
     border-color: none !important;
 }
+.quantity-field{
+    width:100%!important
+}
