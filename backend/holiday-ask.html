@@ -46,6 +46,10 @@
          
             padding: 2px;
         }
+        .templatingSelect2 {
+    width: 100%;
+    margin-top:0px !important;
+}
     </style>
     </head>
 
@@ -718,7 +722,6 @@
                                                 <label for="text">
                                                     اختر الموظف
                                                 </label>
-                                                <br />
                                                 <select class="js-example-basic-single templatingSelect2" name="state" style="padding:10px 20px !important; margin-top:10px">
                                                     <option value="AL">Alabama</option>
 
@@ -728,12 +731,10 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="text">تاريخ بدا الاجازه  </label>
-                                                <br />
                                                 <input type="text" class="datepicker">
                                             </div>
                                             <div class="form-group">
                                                 <label for="text">  المده  </label>
-                                                <br />
                                                 <input type="text" class="datepicker">
                                             </div>
                                          
@@ -742,14 +743,12 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="text">تاريخ انتهاء الاجازه  </label>
-                                                <br />
                                                 <input type="text" class="datepicker">
                                             </div>
                                             <div class="form-group">
                                                 <label for="text">
                                                     اختر البديل
                                                 </label>
-                                                <br />
                                                 <select class="js-example-basic-single templatingSelect2" name="state" style="padding:10px 20px !important; margin-top:10px">
                                                     <option value="AL">Alabama</option>
 
@@ -759,7 +758,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label>هل البديل موجود</label>
-                                                <div class="custom-control custom-switch custom-switch-text custom-control-inline customcheckme">
+                                                <div class="custom-control custom-switch custom-switch-text custom-control-inline customcheckme" style="position:absolute">
                                                     <div class="custom-switch-inner">
                                                         <input type="checkbox" class="custom-control-input" id="customSwitch-11" checked="">
                                                         <label class="custom-control-label" for="customSwitch-11" data-on-label="On" data-off-label="Off">

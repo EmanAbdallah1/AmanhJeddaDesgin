@@ -20,9 +20,14 @@
         <link rel='stylesheet' href='assets/vendor/fullcalendar/timegrid/main.css' />
         <link rel='stylesheet' href='assets/vendor/fullcalendar/list/main.css' />
         <link rel="stylesheet" href="assets/vendor/mapbox/mapbox-gl.css">
+
+        <link href="assets/vendor/select2/select2.css" rel="stylesheet" />
         <link rel="stylesheet" href="assets/css/style.css" />
 
         <link rel="stylesheet" href="assets/css/rtl.css" />
+        <style>
+
+        </style>
 
     </head>
 
@@ -48,161 +53,228 @@
                 </div>
                 <div class="data-scrollbar" data-scroll="1">
                     <nav class="iq-sidebar-menu">
-                        <ul id="iq-sidebar-toggle" class="iq-menu">
-                            <li class=" ">
-                                <a href="index.html">
-                                    <i class="las la-home"></i><span>الرئيسية</span>
-                                </a>
-                            </li>
-                            <li class=" ">
-                                <a href="#guides" class="collapsed" data-toggle="collapse" aria-expanded="false">
-                                    <i class="las la-mobile iq-arrow-left"></i><span>الأدلة</span>
-                                    <i class="las la-angle-right iq-arrow-right arrow-active"></i>
-                                    <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
-                                </a>
-                                <ul id="guides" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                                    <li class=" ">
-                                        <a href="area-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل المناطق</span>
-                                        </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="city-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل المدن</span>
-                                        </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="document-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل انواع المستندات</span>
-                                        </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="biology-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل  الاحياء</span>
-                                        </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="Sub-neighborhoods-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل الاحياء الفرعيه</span>
-                                        </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="Nationalities-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل  الجنسيات</span>
-                                        </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="Religions-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل  الديانات</span>
-                                        </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="document-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل  المسميات الوظيفيه</span>
-                                        </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="job-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل  انواع المستخدمين</span>
-                                        </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="supervisingcompanie-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل  مشرفى شركات الاشراف </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class=" ">
-                                <a href="#mange" class="collapsed" data-toggle="collapse" aria-expanded="false">
-                                    <i class="las la-mobile iq-arrow-left"></i><span>اداره الشركات</span>
-                                    <i class="las la-angle-right iq-arrow-right arrow-active"></i>
-                                    <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
-                                </a>
-                                <ul id="mange" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                                    <li class=" ">
-                                        <a href="company-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل انواع الشركات</span>
-                                        </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="trash-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل انواع النفايات</span>
-                                        </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="trash-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل  الشركات</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class=" ">
-                                <a href="#contracts" class="collapsed" data-toggle="collapse" aria-expanded="false">
-                                    <i class="las la-mobile iq-arrow-left"></i><span>اداره العقود</span>
-                                    <i class="las la-angle-right iq-arrow-right arrow-active"></i>
-                                    <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
-                                </a>
-                                <ul id="contracts" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                                    <li class=" ">
-                                        <a href="company-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل انواع العقود</span>
-                                        </a>
-                                    </li>
+                        <div class="data-scrollbar" data-scroll="1">
+                            <nav class="iq-sidebar-menu">
+                                <div class="data-scrollbar" data-scroll="1">
+                                    <nav class="iq-sidebar-menu">
+                                        <div class="data-scrollbar" data-scroll="1">
+                                            <nav class="iq-sidebar-menu">
+                                                <div class="data-scrollbar" data-scroll="1">
+                                                    <nav class="iq-sidebar-menu">
+                                                        <ul id="iq-sidebar-toggle" class="iq-menu">
+                                                            <li class=" ">
+                                                                <a href="index.html">
+                                                                    <i class="las la-home"></i><span>الرئيسية</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class=" ">
+                                                                <a href="#guides" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                                                                    <i class="las la-mobile iq-arrow-left"></i><span>الأدلة</span>
+                                                                    <i class="las la-angle-right iq-arrow-right arrow-active"></i>
+                                                                    <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
+                                                                </a>
+                                                                <ul id="guides" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                                                                    <li class=" ">
+                                                                        <a href="area-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل المناطق</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class=" ">
+                                                                        <a href="city-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل المدن</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class=" ">
+                                                                        <a href="document-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل انواع المستندات</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class=" ">
+                                                                        <a href="biology-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل  الاحياء</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class=" ">
+                                                                        <a href="Sub-neighborhoods-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل الاحياء الفرعيه</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class=" ">
+                                                                        <a href="Nationalities-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل  الجنسيات</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class=" ">
+                                                                        <a href="Religions-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل  الديانات</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class=" ">
+                                                                        <a href="document-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل  المسميات الوظيفيه</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class=" ">
+                                                                        <a href="job-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل  انواع المستخدمين</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class=" ">
+                                                                        <a href="supervisingcompanie-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل  مشرفى شركات الاشراف </span>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class=" ">
+                                                                <a href="#mange" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                                                                    <i class="las la-mobile iq-arrow-left"></i><span>اداره الشركات</span>
+                                                                    <i class="las la-angle-right iq-arrow-right arrow-active"></i>
+                                                                    <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
+                                                                </a>
+                                                                <ul id="mange" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                                                                    <li class=" ">
+                                                                        <a href="company-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل انواع الشركات</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class=" ">
+                                                                        <a href="trash-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل انواع النفايات</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class=" ">
+                                                                        <a href="trash-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل  الشركات</span>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class=" ">
+                                                                <a href="#contracts" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                                                                    <i class="las la-mobile iq-arrow-left"></i><span>اداره العقود</span>
+                                                                    <i class="las la-angle-right iq-arrow-right arrow-active"></i>
+                                                                    <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
+                                                                </a>
+                                                                <ul id="contracts" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                                                                    <li class=" ">
+                                                                        <a href="company-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل انواع العقود</span>
+                                                                        </a>
+                                                                    </li>
 
-                                </ul>
-                            </li>
-                            <li class=" ">
-                                <a href="#hardware" class="collapsed" data-toggle="collapse" aria-expanded="false">
-                                    <i class="las la-mobile iq-arrow-left"></i><span>اداره المعدات</span>
-                                    <i class="las la-angle-right iq-arrow-right arrow-active"></i>
-                                    <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
-                                </a>
-                                <ul id="hardware" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                                    <li class=" ">
-                                        <a href="company-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل  الماركات</span>
-                                        </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="company-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل  سنوات الصنع</span>
-                                        </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="company-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل ورش الصيانه</span>
-                                        </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="company-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل  الصيانات الدوريه</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class=" ">
-                                <a href="#announcement" class="collapsed" data-toggle="collapse" aria-expanded="false">
-                                    <i class="las la-mobile iq-arrow-left"></i><span>اداره المخالفات</span>
-                                    <i class="las la-angle-right iq-arrow-right arrow-active"></i>
-                                    <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
-                                </a>
-                                <ul id="announcement" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                                    <li class=" ">
-                                        <a href="company-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل  حالات البلاغ</span>
-                                        </a>
-                                    </li>
-                                    <li class=" ">
-                                        <a href="company-guide.html">
-                                            <i class="las la-user-cog"></i><span>دليل  جهات البلاغ</span>
-                                        </a>
-                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class=" ">
+                                                                <a href="#hardware" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                                                                    <i class="las la-mobile iq-arrow-left"></i><span>اداره المعدات</span>
+                                                                    <i class="las la-angle-right iq-arrow-right arrow-active"></i>
+                                                                    <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
+                                                                </a>
+                                                                <ul id="hardware" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                                                                    <li class=" ">
+                                                                        <a href="company-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل  الماركات</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class=" ">
+                                                                        <a href="company-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل  سنوات الصنع</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class=" ">
+                                                                        <a href="company-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل ورش الصيانه</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class=" ">
+                                                                        <a href="company-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل  الصيانات الدوريه</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class=" ">
+                                                                        <a href="company-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>ربط بنود المعاينه بنوع العقد</span>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class=" ">
+                                                                <a href="#announcement" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                                                                    <i class="las la-mobile iq-arrow-left"></i><span>اداره المخالفات</span>
+                                                                    <i class="las la-angle-right iq-arrow-right arrow-active"></i>
+                                                                    <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
+                                                                </a>
+                                                                <ul id="announcement" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                                                                    <li class=" ">
+                                                                        <a href="company-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل  حالات البلاغ</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class=" ">
+                                                                        <a href="company-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>دليل  جهات البلاغ</span>
+                                                                        </a>
+                                                                    </li>
 
-                                </ul>
-                            </li>
-                        </ul>
+                                                                </ul>
+                                                            </li>
+                                                            <li class=" ">
+                                                                <a href="#time" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                                                                    <i class="las la-mobile iq-arrow-left"></i><span>اداره الفترات</span>
+                                                                    <i class="las la-angle-right iq-arrow-right arrow-active"></i>
+                                                                    <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
+                                                                </a>
+                                                                <ul id="time" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                                                                    <li class=" ">
+                                                                        <a href="company-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>العمليات</span>
+                                                                        </a>
+                                                                    </li>
+
+
+                                                                </ul>
+                                                            </li>
+                                                            <li class=" ">
+                                                                <a href="#condition" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                                                                    <i class="las la-mobile iq-arrow-left"></i><span>شروط العقد</span>
+                                                                    <i class="las la-angle-right iq-arrow-right arrow-active"></i>
+                                                                    <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
+                                                                </a>
+                                                                <ul id="condition" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                                                                    <li class=" ">
+                                                                        <a href="company-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>الاحياء</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class=" ">
+                                                                        <a href="company-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>العماله</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class=" ">
+                                                                        <a href="company-guide.html">
+                                                                            <i class="las la-user-cog"></i><span>المعدات</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                    <div class="p-3"></div>
+                                                </div>
+                                            </nav>
+                                            <div class="p-3"></div>
+                                        </div>
+                                    </nav>
+                                    <div class="p-3"></div>
+                                </div>
+                            </nav>
+                            <div class="p-3"></div>
+                        </div>
                     </nav>
+
                     <div id="sidebar-bottom" class="position-relative sidebar-bottom">
                         <div class="card bg-primary rounded">
                             <div class="card-body">
@@ -217,8 +289,7 @@
                     </div>
                     <div class="p-3"></div>
                 </div>
-            </div>  
-            <div class="iq-top-navbar">
+            </div>       <div class="iq-top-navbar">
                 <div class="iq-navbar-custom">
                     <nav class="navbar navbar-expand-lg navbar-light p-0">
                         <div class="iq-navbar-logo d-flex align-items-center justify-content-between">
@@ -546,24 +617,70 @@
                     <div class="row">
                         <div class="col-sm-12 col-lg-12">
                             <div class="card">
-                                
                                 <div class="card-header d-flex justify-content-between">
                                     <div class="header-title">
-                                        <h4 class="card-title">دليل انواع الشركات </h4>
-                                    </div>
-                                    <div class="">
-
-                                        <button type="button" class="btn btn-primary mt-2">حفظ</button>
-                                        <div class="custom-control custom-switch custom-switch-text custom-control-inline customcheckme">
-                                            <div class="custom-switch-inner">
-                                                <input type="checkbox" class="custom-control-input" id="customSwitch-11" checked="">
-                                                <label class="custom-control-label" for="customSwitch-11" data-on-label="On" data-off-label="Off">
-                                                </label>
-                                            </div>
-                                        </div>
+                                        <h4 class="card-title" style="margin-top:6px !important">انشاء فتره  </h4>
                                     </div>
 
                                 </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-12 col-lg-12">
+                            <div class="card" style="padding: 19px;">
+
+                                <div class="row">
+                                    <div class="col-sm-12 col-lg-2">
+                                        <h4 for="text" style="text-align:right"> اسم الفتره</h4>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-4">
+                                        <input type="text" class="form-control" id="time">
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-sm-12 col-lg-2">
+                                        <h4 class="card-title" style=" margin-top: 12px;">بدايه الفتره باليوم  </h4>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-4">
+                                        <select class="templatingSelect2 select2" name="state" style="padding:10px 20px !important">
+                                            <option value="AL">اختر </option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-sm-12 col-lg-2">
+                                        <h4 class="card-title" style=" margin-top: 12px;">نهايه الفتره باليوم  </h4>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-4">
+                                        <select class="templatingSelect2 select2" name="state" style="padding:10px 20px !important">
+                                            <option value="AL">اختر </option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-12">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="header-title">
+                                        <h4 class="card-title" style="margin-top:6px !important">عمليات فتح فتره او اغلاق فتره  </h4>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-12 col-lg-12">
+                            <div class="card">
+
                                 <div class="card-body">
                                     <ul class="nav nav-tabs" id="myTab-1" role="tablist">
                                         <li class="nav-item">
@@ -576,34 +693,111 @@
                                     </ul>
                                     <div class="tab-content" id="myTabContent-2">
                                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                            <div class="col-sm-12 col-lg-12">
-                                             
-                                                        <form>
-                                                            <div class="form-group">
-                                                                <label for="text">الاسم </label>
-                                                                <input type="text" class="form-control" id="email1">
-                                                            </div>
-                                                        </form>
-                                                   
+
+                                            <div class="row">
+
+                                                <div class="col-sm-12 col-lg-2">
+                                                    <h4 class="card-title" style=" margin-top: 12px;">  اختر الفتره  </h4>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-4">
+                                                    <select class="templatingSelect2 select2" name="state" style="padding:10px 20px !important">
+                                                        <option value="AL">اختر </option>
+                                                        <option value="AL">Alabama</option>
+                                                        <option value="WY">Wyoming</option>
+                                                    </select>
+                                                </div>
+                                          
+
+                                          
+                                                <div class="col-sm-12 col-lg-2">
+                                                    <h4 class="card-title" style=" margin-top: 12px;">اختر  العقد  </h4>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-4">
+                                                    <select class="templatingSelect2 select2" name="state" style="padding:10px 20px !important">
+                                                        <option value="AL">اختر </option>
+                                                        <option value="AL">Alabama</option>
+                                                        <option value="WY">Wyoming</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row" style=" margin-bottom: 50px; margin-top: 42px;">
+                                                <div class="col-sm-12 col-lg-5">
+                                                    <h4 for="text"> مده الفتح باليوم او مفتوح حتى يتم اغلاقه</h4>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-4">
+                                                    <input type="text" class="form-control" id="time" style=" position: absolute; left: 128px; bottom: -12px;">
+                                                </div>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
+                                                <label class="custom-control-label" for="customCheck6">فتح الاعتراض</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
+                                                <label class="custom-control-label" for="customCheck6">فتح اعتماد غياب العمال</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
+                                                <label class="custom-control-label" for="customCheck6">فتح اعتماد المعدات البيانيه</label>
                                             </div>
                                         </div>
                                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                            <div class="col-sm-12 col-lg-12">
+
+                                            <div class="row">
+
+                                                <div class="col-sm-12 col-lg-2">
+                                                    <h4 class="card-title" style=" margin-top: 12px;">  اختر الفتره  </h4>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-4">
+                                                    <select class="templatingSelect2 select2" name="state" style=" width:100%">
+                                                        <option value="AL">اختر </option>
+                                                        <option value="AL">Alabama</option>
+                                                        <option value="WY">Wyoming</option>
+                                                    </select>
+                                                </div>
+                                         
+
                                             
-                                                        <form>
-                                                            <div class="form-group">
-                                                                <label for="text">الاسم </label>
-                                                                <input type="text" class="form-control" id="email1">
-                                                            </div>
-                                                        </form>
-                                                   
+                                                <div class="col-sm-12 col-lg-2">
+                                                    <h4 class="card-title" style=" margin-top: 12px;">اختر  العقد  </h4>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-4">
+                                                    <select class="templatingSelect2 select2" name="state" style="width:100%">
+                                                        <option value="AL">اختر </option>
+                                                        <option value="AL">Alabama</option>
+                                                        <option value="WY">Wyoming</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row" style=" margin-bottom: 50px; margin-top: 42px;">
+                                                <div class="col-sm-12 col-lg-5">
+                                                    <h4 for="text"> مده الفتح باليوم او مفتوح حتى يتم اغلاقه</h4>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-4">
+                                                    <input type="text" class="form-control" id="time" style=" position: absolute; left: 128px; bottom: -12px;">
+                                                </div>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
+                                                <label class="custom-control-label" for="customCheck6">فتح الاعتراض</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
+                                                <label class="custom-control-label" for="customCheck6">فتح اعتماد غياب العمال</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
+                                                <label class="custom-control-label" for="customCheck6">فتح اعتماد المعدات البيانيه</label>
                                             </div>
                                         </div>
+
+
                                     </div>
                                 </div>
                             </div>
-
                         </div>
+
+                    </div>
                     </div>
                 </div>
             </div>
@@ -612,14 +806,8 @@
         <footer class="iq-footer">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item"><a href="privacy-policy.html">Privacy Policy</a></li>
-                            <li class="list-inline-item"><a href="terms-of-service.html">Terms of Use</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 text-right">
-                        Copyright 2020 <a href="#">Insta Dash</a> All Rights Reserved.
+                    <div class="col-lg-12 text-center">
+                        Copyright 2020 <a href="http://mtx-it.com/">Creative Matrix</a> All Rights Reserved.
                     </div>
                 </div>
             </div>
@@ -663,6 +851,7 @@
 
         <!-- slider JavaScript -->
         <script src="assets/js/slider.js"></script>
+        <script src="assets/vendor/select2/select.js"></script>
 
         <!-- app JavaScript -->
         <script src="assets/js/app.js"></script>

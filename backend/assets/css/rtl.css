@@ -533,3 +533,8 @@ margin-bottom:10px
     font-size: 19px;
     font-weight: bolder;
 }
+.quantity-field{
+    width:91%!important;
+    padding-top:5px;
+    padding-bottom:5px
+}
