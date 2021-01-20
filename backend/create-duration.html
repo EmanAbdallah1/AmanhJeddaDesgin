@@ -628,40 +628,36 @@
 
 
                         <div class="col-sm-12 col-lg-12">
-                            <div class="card" style="padding: 19px;">
-
-                                <div class="row">
-                                    <div class="col-sm-12 col-lg-2">
-                                        <h4 for="text" style="text-align:right"> اسم الفتره</h4>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-4">
+                            <div class="card" style="padding: 25px;">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                        <label for="text" > اسم الفتره</label>
+                                  
                                         <input type="text" class="form-control" id="time">
-                                    </div>
                                 </div>
-                                <div class="row">
+                                <div class="form-group">
 
-                                    <div class="col-sm-12 col-lg-2">
-                                        <h4 class="card-title" style=" margin-top: 12px;">بدايه الفتره باليوم  </h4>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-4">
+                                        <label>بدايه الفتره باليوم  </label>
+                                   
                                         <select class="templatingSelect2 select2" name="state" style="padding:10px 20px !important">
                                             <option value="AL">اختر </option>
                                             <option value="AL">Alabama</option>
                                             <option value="WY">Wyoming</option>
                                         </select>
-                                    </div>
+                                  
                                 </div>
-                                <div class="row">
+                                <div class="form-group">
 
-                                    <div class="col-sm-12 col-lg-2">
-                                        <h4 class="card-title" style=" margin-top: 12px;">نهايه الفتره باليوم  </h4>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-4">
+                                   
+                                        <label >نهايه الفتره باليوم  </label>
+                                  
+                                  
                                         <select class="templatingSelect2 select2" name="state" style="padding:10px 20px !important">
                                             <option value="AL">اختر </option>
                                             <option value="AL">Alabama</option>
                                             <option value="WY">Wyoming</option>
                                         </select>
+                                   
                                     </div>
                                 </div>
                             </div>
@@ -693,13 +689,12 @@
                                     </ul>
                                     <div class="tab-content" id="myTabContent-2">
                                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
 
-                                            <div class="row">
-
-                                                <div class="col-sm-12 col-lg-2">
-                                                    <h4 class="card-title" style=" margin-top: 12px;">  اختر الفتره  </h4>
-                                                </div>
-                                                <div class="col-sm-12 col-lg-4">
+                                                
+                                                    <label >  اختر الفتره  </label>
+                                               
                                                     <select class="templatingSelect2 select2" name="state" style="padding:10px 20px !important">
                                                         <option value="AL">اختر </option>
                                                         <option value="AL">Alabama</option>
@@ -708,26 +703,28 @@
                                                 </div>
                                           
 
-                                          
-                                                <div class="col-sm-12 col-lg-2">
-                                                    <h4 class="card-title" style=" margin-top: 12px;">اختر  العقد  </h4>
-                                                </div>
-                                                <div class="col-sm-12 col-lg-4">
+                                                  <div class="form-group">
+
+                                                
+                                                    <label >  اختر العقد  </label>
+                                               
                                                     <select class="templatingSelect2 select2" name="state" style="padding:10px 20px !important">
                                                         <option value="AL">اختر </option>
                                                         <option value="AL">Alabama</option>
                                                         <option value="WY">Wyoming</option>
                                                     </select>
                                                 </div>
+                                            
+                                            <div class="form-group" >
+                                             
+                                                    <label for="text"> مده الفتح باليوم </label>
+                                                   <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="yourBox" class=" bg-primary checkbox" style="position:absolute;margin-top:5px;z-index:9;right:44%" />
+                                            <p style="position:relative ;">مفتوح حتى يتم اغلاقه</p>
                                             </div>
-                                            <div class="row" style=" margin-bottom: 50px; margin-top: 42px;">
-                                                <div class="col-sm-12 col-lg-5">
-                                                    <h4 for="text"> مده الفتح باليوم او مفتوح حتى يتم اغلاقه</h4>
+                                                    <input type="text" class="form-control" id="yourText" >
                                                 </div>
-                                                <div class="col-sm-12 col-lg-4">
-                                                    <input type="text" class="form-control" id="time" style=" position: absolute; left: 128px; bottom: -12px;">
-                                                </div>
-                                            </div>
+                                        </div>
                                             <div class="custom-control custom-checkbox custom-control-inline">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
                                                 <label class="custom-control-label" for="customCheck6">فتح الاعتراض</label>
@@ -742,41 +739,42 @@
                                             </div>
                                         </div>
                                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                             <div class="col-lg-6">
+                                            <div class="form-group">
 
-                                            <div class="row">
-
-                                                <div class="col-sm-12 col-lg-2">
-                                                    <h4 class="card-title" style=" margin-top: 12px;">  اختر الفتره  </h4>
-                                                </div>
-                                                <div class="col-sm-12 col-lg-4">
-                                                    <select class="templatingSelect2 select2" name="state" style=" width:100%">
+                                                
+                                                    <label >  اختر الفتره  </label>
+                                               
+                                                    <select class="templatingSelect2 select2" name="state" style="padding:10px 20px !important">
                                                         <option value="AL">اختر </option>
                                                         <option value="AL">Alabama</option>
                                                         <option value="WY">Wyoming</option>
                                                     </select>
                                                 </div>
-                                         
+                                          
 
+                                                  <div class="form-group">
+
+                                                
+                                                    <label >  اختر العقد  </label>
+                                               
+                                                    <select class="templatingSelect2 select2" name="state" style="padding:10px 20px !important">
+                                                        <option value="AL">اختر </option>
+                                                        <option value="AL">Alabama</option>
+                                                        <option value="WY">Wyoming</option>
+                                                    </select>
+                                                </div>
                                             
-                                                <div class="col-sm-12 col-lg-2">
-                                                    <h4 class="card-title" style=" margin-top: 12px;">اختر  العقد  </h4>
-                                                </div>
-                                                <div class="col-sm-12 col-lg-4">
-                                                    <select class="templatingSelect2 select2" name="state" style="width:100%">
-                                                        <option value="AL">اختر </option>
-                                                        <option value="AL">Alabama</option>
-                                                        <option value="WY">Wyoming</option>
-                                                    </select>
-                                                </div>
+                                            <div class="form-group" >
+                                             
+                                                    <label for="text"> مده الفتح باليوم </label>
+                                                   <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="yourBox" class=" bg-primary checkbox" style="position:absolute;margin-top:5px;z-index:9;right:44%" />
+                                            <p style="position:relative ;">مفتوح حتى يتم اغلاقه</p>
                                             </div>
-                                            <div class="row" style=" margin-bottom: 50px; margin-top: 42px;">
-                                                <div class="col-sm-12 col-lg-5">
-                                                    <h4 for="text"> مده الفتح باليوم او مفتوح حتى يتم اغلاقه</h4>
+                                                    <input type="text" class="form-control" id="yourText" >
                                                 </div>
-                                                <div class="col-sm-12 col-lg-4">
-                                                    <input type="text" class="form-control" id="time" style=" position: absolute; left: 128px; bottom: -12px;">
-                                                </div>
-                                            </div>
+                                        </div>
                                             <div class="custom-control custom-checkbox custom-control-inline">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
                                                 <label class="custom-control-label" for="customCheck6">فتح الاعتراض</label>
@@ -856,6 +854,11 @@
         <!-- app JavaScript -->
         <script src="assets/js/app.js"></script>
         <script src="assets/js/main.js"></script>
+            <script>
+        document.getElementById('yourBox').onchange = function () {
+            document.getElementById('yourText').disabled = this.checked;
+        };
+    </script>
     </body>
 
 </html>

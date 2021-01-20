@@ -256,9 +256,6 @@ h4 {
     margin-left: 10px;
 }
 
-.select2-container {
-    margin-right: -100px
-}
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
     text-align: left;
