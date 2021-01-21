@@ -34,6 +34,14 @@
         .datepicker{
             padding:3px!important
         }
+        .select2-container--default .select2-selection--single {
+      
+            border-radius: 4px;
+            background: #fafbfe;
+            border: 1px solid #f1f1f1 !important;
+            font-size: 14px !important;
+            color: #535f6b !important;
+        }
     </style>
 </head>
 
@@ -588,7 +596,7 @@
                                         اختر  المعده
                                     </label>
                                     <br />
-                                    <select class="js-example-basic-single templatingSelect2 select2" name="state" style="padding:10px 20px !important; margin-top:10px">
+                                    <select class="js-example-basic-single templatingSelect2 select2" name="state">
                                         <option value="AL">Alabama</option>
 
                                         <option value="WY">Wyoming</option>
@@ -644,12 +652,12 @@
                                         <label class="custom-control-label" for="customCheck6">فتح الاعتراض</label>
                                     </div>
                                     <div class="custom-control custom-checkbox custom-control-inline">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
-                                        <label class="custom-control-label" for="customCheck6">فتح اعتماد غياب العمال</label>
+                                        <input type="checkbox" class="custom-control-input" id="customCheck7" Checked="">
+                                        <label class="custom-control-label" for="customCheck7">فتح اعتماد غياب العمال</label>
                                     </div>
                                     <div class="custom-control custom-checkbox custom-control-inline">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck6" Checked="">
-                                        <label class="custom-control-label" for="customCheck6">فتح اعتماد المعدات البيانيه</label>
+                                        <input type="checkbox" class="custom-control-input" id="customCheck8" Checked="">
+                                        <label class="custom-control-label" for="customCheck8">فتح اعتماد المعدات البيانيه</label>
                                     </div>
                                 </div>
                             </div>
@@ -755,29 +763,10 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/all.js"></script>
     <script>
-        $('.datepicker').pickadate({
-            format: 'mm/dd/yyyy',
-            monthsFull: ['يناير', 'فبراير', 'مارس', 'ابريل', 'مايو', 'يونية', 'يوليو', 'اغسطس', 'سبتمبر', 'اكتوبر', 'نوفمبر', 'ديسمبر'],
-            weekdaysShort: ['الأحد', 'الأثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
-
-            // Buttons
-            today: 'اليوم',
-            clear: 'مسح',
-            close: 'غلق',
-
-            // Accessibility labels
-            labelMonthNext: 'الشهر التالي',
-            labelMonthPrev: 'الشهر السابق',
-            labelMonthSelect: 'اختر شهر',
-            labelYearSelect: 'اختر عام',
-        });
-    </script>
-    <script>
         document.getElementById('yourBox').onchange = function () {
             document.getElementById('yourText').disabled = this.checked;
         };
     </script>
-
 </body>
 
 </html >

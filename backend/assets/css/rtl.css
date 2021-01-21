@@ -428,6 +428,10 @@ label{
 .picker__input {
     cursor: default;
     width: 100%;
+    background: #fafbfe;
+    border: 1px solid #f1f1f1;
+    font-size: 14px;
+    color: #535f6b;
 }
 .form-control {
     width: 100% !important;

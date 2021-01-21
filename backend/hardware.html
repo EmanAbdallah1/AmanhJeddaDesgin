@@ -31,55 +31,6 @@
         <link rel="stylesheet" href="/resources/demos/style.css">
         <link href="assets/vendor/select2/select2.css" rel="stylesheet" />
         <style>
-            .templatingSelect2.select2 {
-                width: 100%
-            }
-
-            .select2-container {
-                box-sizing: border-box;
-                display: inline-block;
-                margin: 0;
-                position: absolute;
-                vertical-align: middle;
-               
-            }
-            .select2-container--default .select2-selection--single {
-                margin-right: auto;
-            }
-
-            .quantity-field {
-                position: relative;
-                padding-right: 34px;
-                padding-left: 17px;
-            }
-
-            .select2-dropdown {
-                width: 273px !important;
-            }
-
-            .templatingSelect2.select2 {
-                width: 60% !important
-            }
-
-            .form-control {
-                width: 60%;
-            }
-
-            .inline {
-                display: flex
-            }
-
-            .picker__input {
-                width: 60%;
-                padding: 10px;
-                border: 1px solid gainsboro;
-            }
-
-            .custom-file-upload {
-                color: white;
-                background: #05bbc9;
-                padding: 10px;
-            }
             .quantity-field{
                 width:91% !important;
                 padding-top:5px;
@@ -673,7 +624,7 @@
                                 <div class="row">
 
                                     <div class="col-sm-12 col-lg-6">
-                                        <h6 class="card-title" style=" margin-top: 12px;">اختر مجموعه المعدة </h6>
+                                        <label >اختر مجموعه المعدة </label>
 
                                         <select class="templatingSelect2 select2" style="padding:10px 20px !important">
                                             <option value="AL">اختر </option>
@@ -682,7 +633,7 @@
                                         </select>
 
 
-                                        <h6 class="card-title" style=" margin-top: 12px;">اختر  المعدة  </h6>
+                                        <label >اختر  المعدة  </label>
                                         <select class="templatingSelect2 select2" style="padding:10px 20px !important"  name="states[]" multiple="multiple">
                                             <option value="AL">اختر </option>
                                             <option value="AL">Alabama</option>
@@ -785,30 +736,8 @@
         <script src="assets/js/main.js"></script>
         <script src="assets/js/all.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $('.js-example-basic-multiple').select2();
-            });
-        </script>
-        <script>
-            $(document).ready(function () {
-                $('.plusminus').on('click', '.button-plus', function () {
-                    var $input = $(this).siblings('input');
-                    $input.val(parseInt($input.val()) + 1);
-                })
-                $('.plusminus').on('click', '.button-minus', function () {
-                    var $input = $(this).siblings('input');
-                    var count = parseInt($input.val());
-                    if (count > 0) {
-                        var newval = $input.val(parseInt($input.val()) - 1)
-                    } else {
-                        newval = 0
-                    }
+     
 
-                })
-            }
-            );
-        </script>
     </body>
 
 </html>

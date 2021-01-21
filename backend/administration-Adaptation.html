@@ -1,4 +1,4 @@
-﻿<!doctype html>
+﻿                <!doctype html>
 <html lang="en">
 
 <head>
@@ -632,7 +632,7 @@
                                     <label for="text"> عدد مرات الاعتراض المسموح بها للمقاول  </label>
                                     <div class="input-group plusminus">
                                         <button type="button" class="button-plus" data-field="quantity" style="position:absolute;top:0;z-index:9"><i class="fas fa-plus"></i></button>
-                                        <input type="text" step="1" max="" value="1" name="quantity" class="quantity-field" style="position: relative;  margin-right: 18px;" />
+                                        <input type="text" step="1" max="" value="1" name="quantity" class="quantity-field" style="position: relative;  margin-right: 32px;" />
                                         <button type="button" class="button-minus" data-field="quantity" style="position:absolute;bottom:0;z-index:9;left:0"><i class="fas fa-minus"></i></button>
                                     </div>
                                 </div>
@@ -640,7 +640,7 @@
                                     <label for="text"> عدد مرات الرفض المسموح بها للمشرف  </label>
                                     <div class="input-group plusminus">
                                         <button type="button" class="button-plus" data-field="quantity" style="position:absolute;top:0;z-index:9"><i class="fas fa-plus"></i></button>
-                                        <input type="text" step="1" max="" value="1" name="quantity" class="quantity-field" style="position: relative;  margin-right: 18px;" />
+                                        <input type="text" step="1" max="" value="1" name="quantity" class="quantity-field" style="position: relative;  margin-right: 32px;" />
                                         <button type="button" class="button-minus" data-field="quantity" style="position:absolute;bottom:0;z-index:9;left:0"><i class="fas fa-minus"></i></button>
                                     </div>
                                 </div>
@@ -692,10 +692,10 @@
                             </div>
                         </div>
                     </div>
-                    </div>
-
                 </div>
+
             </div>
+        </div>
     </div>
     <!-- Wrapper End-->
     <footer class="iq-footer">
@@ -765,111 +765,6 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/all.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            $('.plusminus').on('click', '.button-plus', function () {
-                var $input = $(this).siblings('input');
-                $input.val(parseInt($input.val()) + 1);
-            })
-            $('.plusminus').on('click', '.button-minus', function () {
-                var $input = $(this).siblings('input');
-                var count = parseInt($input.val());
-                if (count > 0) {
-                    var newval = $input.val(parseInt($input.val()) - 1)
-                } else {
-                    newval = 0
-                }
-
-            })
-        }
-        );
-    </script>
-    <script>
-        var $datetime;
-
-        var datepicker = $('#datetime').pickadate({
-            formatSubmit: 'dd/mm/yyyy',
-            monthsFull: ['يناير', 'فبراير', 'مارس', 'ابريل', 'مايو', 'يونية', 'يوليو', 'اغسطس', 'سبتمبر', 'اكتوبر', 'نوفمبر', 'ديسمبر'],
-            weekdaysShort: ['الأحد', 'الأثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
-
-            // Buttons
-            today: 'اليوم',
-            clear: 'مسح',
-            close: 'غلق',
-
-            // Accessibility labels
-            labelMonthNext: 'الشهر التالي',
-            labelMonthPrev: 'الشهر السابق',
-            labelMonthSelect: 'اختر شهر',
-            labelYearSelect: 'اختر عام',
-            container: '#containerdatetime',
-
-            // min: [2015, 7, 14],
-            // editable: true,
-            closeOnSelect: true,
-            closeOnClear: false,
-            // Buttons
-            today: false,
-            // Formats
-            onSet: function (item) {
-                if ('select' in item) setTimeout(timepicker.open, 0);
-            }
-        }).pickadate('picker');
-
-        var timepicker = $('#time').pickatime({
-            container: '#containerdatetime',
-            format: 'H:i ساعة',
-            interval: 60,
-            clear: 'مسح',
-
-            onRender: function () {
-                $('<button class="btn btn-danger">رجوع</button>').on('click', function () {
-                    timepicker.close();
-                    datepicker.open();
-                }).prependTo(this.$root.find('.picker__box'));
-            },
-            onSet: function (item) {
-                if ('select' in item) setTimeout(function () {
-                    $('.js-datepicker.active').val(datepicker.get() + '  ' + timepicker.get());
-                    $('.js-datepicker').removeClass('active');
-                    $('.active_name').val($('input[name=date_submit]').val() + ' ' + $('#time').val().replace(' horas', '')).removeClass('active_name');
-
-                }, 0)
-            }
-        }).pickatime('picker');
-
-        $('.js-datepicker').each(function () {
-            var me = $(this);
-
-            $(this).on('focus', function (event) {
-                $(this).addClass('active');
-                $('input[name=' + event.target.name + '_date]').addClass('active_name');
-            });
-
-            $datetime = $(this).on('focus', datepicker.open).on('click', function (event) {
-                event.stopPropagation();
-                datepicker.open();
-            });
-        });
-
-        $('.datepicker').pickadate({
-            format: 'mm/dd/yyyy',
-            monthsFull: ['يناير', 'فبراير', 'مارس', 'ابريل', 'مايو', 'يونية', 'يوليو', 'اغسطس', 'سبتمبر', 'اكتوبر', 'نوفمبر', 'ديسمبر'],
-            weekdaysShort: ['الأحد', 'الأثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
-
-            // Buttons
-            today: 'اليوم',
-            clear: 'مسح',
-            close: 'غلق',
-
-            // Accessibility labels
-            labelMonthNext: 'الشهر التالي',
-            labelMonthPrev: 'الشهر السابق',
-            labelMonthSelect: 'اختر شهر',
-            labelYearSelect: 'اختر عام',
-        });
-
-    </script>
 </body>
 
 </html >

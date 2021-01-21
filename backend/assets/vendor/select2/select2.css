@@ -659,3 +659,12 @@
 .select2-container--classic.select2-container--open .select2-dropdown {
     border-color: #5897fb
 }
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background: #fafbfe;
+    border: 1px solid #f1f1f1 !important;
+    font-size: 14px !important;
+    color: #535f6b !important;
+}

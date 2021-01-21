@@ -1014,72 +1014,6 @@
                 $(this).siblings(".accordion-body").fadeToggle(100);
             })
         });
-        //$('.file-upload').change(function () {
-        //    var i = $(this).prev('label').clone();
-        //    var file = $('.file-upload')[0].files[0].name;
-        //    $(this).prev('label').text(file);
-        //});
-        //$('.upload').change(function () {
-        //    var i = $(this).prev('label').clone();
-        //    var file = $('.upload')[0].files[0].name;
-        //    $(this).prev('label').text(file);
-        //});
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $(".main-files").on('click', ".custom-file-upload", function () {
-                $(this).siblings(".file-upload").click();
-            })
-            $(".main-files").on('change', ".file-upload", function () {
-                var numfirst = 0;
-                if ($(this).val().indexOf('/') > 0) {
-                    numfirst = $(this).val().lastIndexOf('/');
-                } else if ($(this).val().indexOf('\\') > 0) {
-                    numfirst = $(this).val().lastIndexOf('\\');
-                }
-                $(this).siblings(".custom-file-upload").html($(this).val().slice(numfirst + 1));
-            })
-        })
-
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $(".main-data").on('click', ".custom-file-upload", function () {
-                $(this).siblings(".upload").click();
-            })
-            $(".main-data").on('change', ".upload", function () {
-                var numfirst = 0;
-                if ($(this).val().indexOf('/') > 0) {
-                    numfirst = $(this).val().lastIndexOf('/');
-                } else if ($(this).val().indexOf('\\') > 0) {
-                    numfirst = $(this).val().lastIndexOf('\\');
-                }
-                $(this).siblings(".custom-file-upload").html($(this).val().slice(numfirst + 1));
-            })
-        })
-
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $('.plusminus').on('click', '.button-plus', function () {
-                var $input = $(this).siblings('input');
-                $input.val(parseInt($input.val()) + 1);
-            })
-            $('.plusminus').on('click', '.button-minus', function () {
-                var $input = $(this).siblings('input');
-                var count = parseInt($input.val());
-                if (count > 0) {
-                    var newval = $input.val(parseInt($input.val()) - 1)
-                } else {
-                    newval = 0
-                }
-
-            })
-        }
-        );
     </script>
     <script>
         $(document).ready(function () {
@@ -1229,10 +1163,7 @@
                 $(this).closest("tbody").children("tr:last-child").children("td").find("input").val("");
 
                 if ($(this).closest("tbody").children("tr:last-child").children("td:last-child").children(".btn-delnew").length == 0) {
-                    $(this).closest("tbody").children("tr:last-child").children("td:last-child").append(`<button type="button"
-                                                                                        class="btn bg-danger-light btn-rounded btn-sm my-0 btn-delnew">
-                                                                                    <i class="fas fa-trash-alt"></i>
-                                                                                </button>`);
+                    $(this).closest("tbody").children("tr:last-child").children("td:last-child").append(`<button type="button"                                                    </button>`);
                 }
             })
             $(".main-contact").on("click", ".btn-delnew", function () {

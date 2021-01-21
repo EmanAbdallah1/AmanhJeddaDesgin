@@ -903,23 +903,7 @@
             });
 
         </script>
-        <script>
-            $(document).ready(function () {
-                $(".main-files").on('click', ".custom-file-upload", function () {
-                    $(this).siblings(".file-upload").click();
-                })
-                $(".main-files").on('change', ".file-upload", function () {
-                    var numfirst = 0;
-                    if ($(this).val().indexOf('/') > 0) {
-                        numfirst = $(this).val().lastIndexOf('/');
-                    } else if ($(this).val().indexOf('\\') > 0) {
-                        numfirst = $(this).val().lastIndexOf('\\');
-                    }
-                    $(this).siblings(".custom-file-upload").html($(this).val().slice(numfirst + 1));
-                })
-            })
 
-        </script>
     </body>
 
 
