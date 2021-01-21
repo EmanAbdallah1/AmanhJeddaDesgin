@@ -732,25 +732,7 @@
         <script src="assets/js/app.js"></script>
         <script src="assets/js/main.js"></script>
         <script src="assets/js/all.js"></script>
-        <script>
-            $(document).ready(function () {
-                $('.plusminus').on('click', '.button-plus', function () {
-                    var $input = $(this).siblings('input');
-                    $input.val(parseInt($input.val()) + 1);
-                })
-                $('.plusminus').on('click', '.button-minus', function () {
-                    var $input = $(this).siblings('input');
-                    var count = parseInt($input.val());
-                    if (count > 0) {
-                        var newval = $input.val(parseInt($input.val()) - 1)
-                    } else {
-                        newval = 0
-                    }
-
-                })
-            }
-            );
-        </script>
+ 
     </body>
 
     </html>

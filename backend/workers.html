@@ -30,57 +30,7 @@
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="/resources/demos/style.css">
         <link href="assets/vendor/select2/select2.css" rel="stylesheet" />
-        <style>
-            .templatingSelect2.select2 {
-                width: 100%
-            }
-
-            .select2-container {
-                box-sizing: border-box;
-                display: inline-block;
-                margin: 0;
-                position: absolute;
-                vertical-align: middle;
-               
-            }
-            .select2-container--default .select2-selection--single {
-                margin-right: auto;
-            }
-
-            .quantity-field {
-                position: relative;
-                padding-right: 34px;
-                padding-left: 17px;
-            }
-
-            .select2-dropdown {
-                width: 273px !important;
-            }
-
-            .templatingSelect2.select2 {
-                width: 60% !important
-            }
-
-            .form-control {
-                width: 60%;
-            }
-
-            .inline {
-                display: flex
-            }
-
-            .picker__input {
-                width: 60%;
-                padding: 10px;
-                border: 1px solid gainsboro;
-            }
-
-            .custom-file-upload {
-                color: white;
-                background: #05bbc9;
-                padding: 10px;
-            }
-        </style>
+   
     </head>
 
     <body class=" color-light ">
@@ -781,30 +731,7 @@
         <script src="assets/js/main.js"></script>
         <script src="assets/js/all.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $('.js-example-basic-multiple').select2();
-            });
-        </script>
-        <script>
-            $(document).ready(function () {
-                $('.plusminus').on('click', '.button-plus', function () {
-                    var $input = $(this).siblings('input');
-                    $input.val(parseInt($input.val()) + 1);
-                })
-                $('.plusminus').on('click', '.button-minus', function () {
-                    var $input = $(this).siblings('input');
-                    var count = parseInt($input.val());
-                    if (count > 0) {
-                        var newval = $input.val(parseInt($input.val()) - 1)
-                    } else {
-                        newval = 0
-                    }
-
-                })
-            }
-            );
-        </script>
+     
     </body>
 
 </html>

@@ -31,18 +31,7 @@
     <link rel="stylesheet" href="/resources/demos/style.css">
     <link href="assets/vendor/select2/select2.css" rel="stylesheet" />
     <style>
-    h4{
-            font-size: 18px;
-                line-height: 21px;      
-    }
-
-    .col-lg-4{
-        margin-top:10px
-    }
-       .col-lg-2{
-        margin-top:10px
-    }
-        .datepicker {
+  .datepicker {
          
             padding: 2px;
         }
@@ -722,7 +711,7 @@
                                                 <label for="text">
                                                     اختر الموظف
                                                 </label>
-                                                <select class="js-example-basic-single templatingSelect2" name="state" style="padding:10px 20px !important; margin-top:10px">
+                                                <select class="js-example-basic-single templatingSelect2 select2" name="state" style="padding:10px 20px !important; margin-top:10px">
                                                     <option value="AL">Alabama</option>
 
                                                     <option value="WY">Wyoming</option>
@@ -749,7 +738,7 @@
                                                 <label for="text">
                                                     اختر البديل
                                                 </label>
-                                                <select class="js-example-basic-single templatingSelect2" name="state" style="padding:10px 20px !important; margin-top:10px">
+                                                <select class="js-example-basic-single templatingSelect2 select2" name="state" style="padding:10px 20px !important; margin-top:10px">
                                                     <option value="AL">Alabama</option>
 
                                                     <option value="WY">Wyoming</option>
@@ -838,24 +827,6 @@
         <script src="assets/js/app.js"></script>
         <script src="assets/js/main.js"></script>
         <script src="assets/js/all.js"></script>
-        <script>
-            $(".datepicker").pickadate({
-                format: 'mm/dd/yyyy',
-                monthsFull: ['يناير', 'فبراير', 'مارس', 'ابريل', 'مايو', 'يونية', 'يوليو', 'اغسطس', 'سبتمبر', 'اكتوبر', 'نوفمبر', 'ديسمبر'],
-                weekdaysShort: ['الأحد', 'الأثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
-
-                // Buttons
-                today: 'اليوم',
-                clear: 'مسح',
-                close: 'غلق',
-
-                // Accessibility labels
-                labelMonthNext: 'الشهر التالي',
-                labelMonthPrev: 'الشهر السابق',
-                labelMonthSelect: 'اختر شهر',
-                labelYearSelect: 'اختر عام',
-            });
-        </script>
     </body>
 
 
