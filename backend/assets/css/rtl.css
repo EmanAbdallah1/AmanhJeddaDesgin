@@ -328,7 +328,7 @@ h4 {
   
 }
 table.dataTable tfoot th {
-    padding: 35px 18px 6px;
+    padding: 9px 18px 6px;
     border-top: 1px solid #111;
 }
 
@@ -472,6 +472,7 @@ input {
     cursor: pointer;
     background: #05bbc9;
     color: white;
+    text-align: center;
 }
 .Tablet{
     display:flex

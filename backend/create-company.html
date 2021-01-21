@@ -31,8 +31,8 @@
     <link rel="stylesheet" href="/resources/demos/style.css">
     <link href="assets/vendor/select2/select2.css" rel="stylesheet" />
     <style>
-        .form-control {
-            width: 56% !important;
+        .templatingSelect2{
+            margin-top:0!important
         }
 
         .templatingSelect2 {
@@ -74,14 +74,7 @@
             padding: 7px
         }
 
-        .custom-file-upload {
-            border: 1px solid #ccc;
-            display: inline-block;
-            padding: 6px 12px;
-            cursor: pointer;
-            background: #05bbc9;
-            color: white;
-        }
+  
 
         ::-webkit-scrollbar-track {
             box-shadow: inset 0 0 5px #8080803b;
@@ -113,6 +106,11 @@
             right: 0;
             top: 0;
             border: 1px;
+        }
+        .quantity-field {
+            width: 86% !important;
+            padding-top: 5px;
+            padding-bottom: 5px;
         }
           .templatingSelect2{
                 width:100%;
@@ -709,7 +707,7 @@
                                                 <label for="text">
                                                     اختر نوع النفايه
                                                 </label>
-                                                <select class="js-example-basic-single templatingSelect2" name="state" style="padding:10px 20px !important; margin-top:10px">
+                                                <select class="js-example-basic-single templatingSelect2  select2" name="state" style="padding:10px 20px !important; margin-top:10px">
                                                     <option value="AL">Alabama</option>
 
                                                     <option value="WY">Wyoming</option>
