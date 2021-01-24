@@ -628,13 +628,13 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="text">
-                                        اختر الفتره
+                                        اختر الفتره او حتى الان
                                     </label>
                                      <div class="custom-control custom-checkbox custom-checkbox-color-check custom-control-inline">
-                                        <input type="checkbox" class="custom-control-input bg-primary" id="customCheck-1" checked="">
-                                        <label class="custom-control-label" for="customCheck-1"> حتى الان</label>
+                                        <input type="checkbox" id="customCheck">
+                                       
                                     </div>
-                                    <select class="js-example-basic-single templatingSelect2 select2" name="state" >
+                                    <select class="js-example-basic-single templatingSelect2 select2" name="state" id="sel">
                                         <option value="AL">Alabama</option>
 
                                         <option value="WY">Wyoming</option>
@@ -758,6 +758,18 @@
     <script src="assets/js/app.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/all.js"></script>
+    <script>
+        $(document).ready(function () {
+       
+            document.getElementById('customCheck').onchange = function () {
+                document.getElementById('sel').disabled = this.checked;
+            };
+
+        })
+
+
+     
+    </script>
 </body>
 
 </html >

@@ -31,24 +31,9 @@
     <link rel="stylesheet" href="/resources/demos/style.css">
     <link href="assets/vendor/select2/select2.css" rel="stylesheet" />
     <style>
-    h4{
-            font-size: 18px;
-                line-height: 21px;      
-    }
-
-    .col-lg-4{
-        margin-top:10px
-    }
-       .col-lg-2{
-        margin-top:10px
-    }
-    .templatingSelect2{
-        width:100%;
-        margin-top:0!important;
-    }
-    .datepicker{
-        padding-top:0
-    }
+        .quantity-field {
+            width: 88% !important;
+        }
   
     </style>
     </head>
@@ -864,60 +849,7 @@
     <script src="assets/js/app.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/all.js"></script>
-    <script>
-    $(".datepicker").pickadate({
-                    format: 'mm/dd/yyyy',
-                    monthsFull: ['يناير', 'فبراير', 'مارس', 'ابريل', 'مايو', 'يونية', 'يوليو', 'اغسطس', 'سبتمبر', 'اكتوبر', 'نوفمبر', 'ديسمبر'],
-                    weekdaysShort: ['الأحد', 'الأثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'],
 
-                    // Buttons
-                    today: 'اليوم',
-                    clear: 'مسح',
-                    close: 'غلق',
-
-                    // Accessibility labels
-                    labelMonthNext: 'الشهر التالي',
-                    labelMonthPrev: 'الشهر السابق',
-                    labelMonthSelect: 'اختر شهر',
-                    labelYearSelect: 'اختر عام',
-                });
-    </script>
-        <script>
-        $(document).ready(function () {
-            $(".custom-file-upload").on('click', function () {
-                $(this).siblings(".upload").click();
-            })
-            $(".upload").on('change',function () {
-                var numfirst = 0;
-                if ($(this).val().indexOf('/') > 0) {
-                    numfirst = $(this).val().lastIndexOf('/');
-                } else if ($(this).val().indexOf('\\') > 0) {
-                    numfirst = $(this).val().lastIndexOf('\\');
-                }
-                $(this).siblings(".custom-file-upload").html($(this).val().slice(numfirst + 1));
-            })
-        })
-
-    </script>
-        <script>
-        $(document).ready(function () {
-            $('.plusminus').on('click', '.button-plus', function () {
-                var $input = $(this).siblings('input');
-                $input.val(parseInt($input.val()) + 1);
-            })
-            $('.plusminus').on('click', '.button-minus', function () {
-                var $input = $(this).siblings('input');
-                var count = parseInt($input.val());
-                if (count > 0) {
-                    var newval = $input.val(parseInt($input.val()) - 1)
-                } else {
-                    newval = 0
-                }
-
-            })
-        }
-        );
-    </script>
     </body>
     
 </html>

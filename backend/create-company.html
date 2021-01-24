@@ -686,63 +686,63 @@
                         </div>
                     </div>
                 </div>
-         
 
-                    <div class="accordion">
-                        <div class="card">
-                            <div class="card-header  btn-accordion">
-                                <h5 class="mb-0">
-                                    <i class="fas fa-minus icon"></i>
-                                    <span> البيانات الاساسيه</span>
 
-                                </h5>
-                            </div>
+                <div class="accordion">
+                    <div class="card">
+                        <div class="card-header  btn-accordion">
+                            <h5 class="mb-0">
+                                <i class="fas fa-minus icon"></i>
+                                <span> البيانات الاساسيه</span>
 
-                            <div class="accordion-body" style="padding:15px">
-                                <form>
+                            </h5>
+                        </div>
 
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label for="text">
-                                                    اختر نوع النفايه
-                                                </label>
-                                                <select class="js-example-basic-single templatingSelect2  select2" name="state" style="padding:10px 20px !important; margin-top:10px">
-                                                    <option value="AL">Alabama</option>
+                        <div class="accordion-body" style="padding:15px">
+                            <form>
 
-                                                    <option value="WY">Wyoming</option>
-                                                </select>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="text">
+                                                اختر نوع النفايه
+                                            </label>
+                                            <select class="js-example-basic-single templatingSelect2  select2" name="state" style="padding:10px 20px !important; margin-top:10px">
+                                                <option value="AL">Alabama</option>
 
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="text">اسم الشركه  </label>
-                                                <input type="text" class="form-control" id="email1">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="text">اسم الشركه  </label>
-                                                <input type="text" class="form-control" id="email1">
-                                            </div>
+                                                <option value="WY">Wyoming</option>
+                                            </select>
+
                                         </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label for="text">شعار الشركه  </label>
-                                                <input type="text" class="form-control" id="email1">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="text">كود الشركه  </label>
-                                                <input type="text" class="form-control" id="email1">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="text">عنوان الشركه  </label>
-                                                <input type="text" class="form-control" id="email1">
-                                            </div>
+                                        <div class="form-group">
+                                            <label for="text">اسم الشركه  </label>
+                                            <input type="text" class="form-control" id="email1">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="text">اسم الشركه  </label>
+                                            <input type="text" class="form-control" id="email1">
                                         </div>
                                     </div>
-                                </form>
-                            </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="text">شعار الشركه  </label>
+                                            <input type="text" class="form-control" id="email1">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="text">كود الشركه  </label>
+                                            <input type="text" class="form-control" id="email1">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="text">عنوان الشركه  </label>
+                                            <input type="text" class="form-control" id="email1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
-               
+                </div>
+
                 <div class="accordion">
                     <div class="card">
                         <div class="card-header  btn-accordion">
@@ -777,6 +777,25 @@
                                                         <input type="radio" id="customRadio7" name="customRadio-1" class="custom-control-input">
                                                         <label class="custom-control-label" for="customRadio7"> رقم اتصال  </label>
                                                     </div>
+
+
+                                                    <!--<div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio"
+                                                               id="customRadio8"
+                                                               name="customRadio-2"
+                                                               class="custom-control-input" />
+                                                        <label class="custom-control-label" for="customRadio8"> ايميل </label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio"
+                                                               id="customRadio9"
+                                                               name="customRadio-2"
+                                                               class="custom-control-input" />
+                                                        <label class="custom-control-label" for="customRadio9"> رقم اتصال </label>
+                                                    </div>-->
+
+
+
                                                 </td>
                                                 <td contenteditable="true"><input type="text" /></td>
                                                 <td contenteditable="true"><input type="text" /></td>
@@ -1029,15 +1048,15 @@
                 $(this).closest("tbody").children("tr").children("td").children(".choose-document").select2();
                 $(this).closest("tbody").children("tr:last-child").children("td").find(".empty").val("");
                 $(this).closest("tbody").children("tr:last-child").children("td:eq(5)").html(`                                                        <label for="file-upload" class="custom-file-upload">
-                                                                                <i class="fas fa-cloud"></i> Upload file
-                                                                            </label>
-                                                                            <input id="file-upload" name='upload_cont_img' type="file" style="display:none;">
+                                                                                    <i class="fas fa-cloud"></i> Upload file
+                                                                                </label>
+                                                                                <input id="file-upload" name='upload_cont_img' type="file" style="display:none;">
 `);
                 if ($(this).closest("tbody").children("tr:last-child").children("td:last-child").children(".btn-delnew").length == 0) {
                     $(this).closest("tbody").children("tr:last-child").children("td:last-child").append(`<button type="button"
-                                                                                    class="btn bg-danger-light btn-rounded btn-sm my-0 btn-delnew">
-                                                                                <i class="fas fa-trash-alt"></i>
-                                                                            </button>`);
+                                                                                        class="btn bg-danger-light btn-rounded btn-sm my-0 btn-delnew">
+                                                                                    <i class="fas fa-trash-alt"></i>
+                                                                                </button>`);
                 }
                 $(this).closest("tbody").children("tr:last-child").find(".datepicker").pickadate({
                     format: 'mm/dd/yyyy',
@@ -1083,29 +1102,28 @@
         });
 
     </script>
+   
     <script>
         $(document).ready(function () {
             $(".main-data").on("click", ".btn-addnew", function () {
                 $(this).closest("tbody").append($(this).closest("tr").clone());
-
-
-
                 $(this).closest("tbody").children("tr:last-child").children("td").children(".datepicker").removeClass("picker__input").removeClass("picker__input--active");
                 $(this).closest("tbody").children("tr:last-child").children("td").children(".datepicker").siblings(".picker").remove();
                 $(this).closest("tbody").children("tr:last-child").children("td").children(".datepicker").removeAttr("id").removeAttr("aria-owns");
                 $(this).closest("tbody").children("tr:last-child").children("td").children(".choose-document").val($(this).closest("tbody").children("tr:last-child").children("td").children(".choose-document option:first-child").val());
 
-                $(this).closest("tbody").children("tr:last-child").children("td").find(".empty").val("");
-
-                $(this).closest("tbody").children("tr:last-child").children("td:eq(5)").html(`                                                        <label for="file-upload" class="custom-file-upload">
-                                                                                <i class="fas fa-cloud"></i> Upload file
-                                                                            </label>
-                                                                            <input id="file-upload" name='upload_cont_img' type="file" style="display:none;">`);
+                $(this).closest("tbody").children("tr").children("td").children(".choose-document").select2();
+                $(this).closest("tbody").children("tr:last-child").children("td").find("input").val("");
+                $(this).closest("tbody").children("tr:last-child").children("td:eq(2)").html(`                                                        <label for="file-upload" class="custom-file-upload">
+                                                                                    <i class="fas fa-cloud"></i> Upload file
+                                                                                </label>
+                                                                                <input id="file-upload" name='upload_cont_img' type="file" style="display:none;">
+`);
                 if ($(this).closest("tbody").children("tr:last-child").children("td:last-child").children(".btn-delnew").length == 0) {
                     $(this).closest("tbody").children("tr:last-child").children("td:last-child").append(`<button type="button"
-                                                                                    class="btn bg-danger-light btn-rounded btn-sm my-0 btn-delnew">
-                                                                                <i class="fas fa-trash-alt"></i>
-                                                                            </button>`);
+                                                                                        class="btn bg-danger-light btn-rounded btn-sm my-0 btn-delnew">
+                                                                                    <i class="fas fa-trash-alt"></i>
+                                                                                </button>`);
                 }
                 $(this).closest("tbody").children("tr:last-child").find(".datepicker").pickadate({
                     format: 'mm/dd/yyyy',
